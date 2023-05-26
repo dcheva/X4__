@@ -45,7 +45,7 @@
   <collisionassist>true</collisionassist>
   <controlmodemessages>false</controlmodemessages>
   <radarmode>false</radarmode>
-  <stopshipinmenu>true</stopshipinmenu>
+  <stopshipinmenu>false</stopshipinmenu>
   <forceshootatcursor>false</forceshootatcursor>
   <fpusecameraforward>false</fpusecameraforward>
   <separateRadar>true</separateRadar>
