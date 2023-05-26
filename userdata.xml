@@ -14,4 +14,7 @@
   <story_hq_signal_leak>1</story_hq_signal_leak>
   <x4ke_sod_discovered>1</x4ke_sod_discovered>
   <known_sector_xenon>1</known_sector_xenon>
+  <known_datavault>1</known_datavault>
+  <timeline_agi_tension>1</timeline_agi_tension>
+  <known_timeline_unlock>1</known_timeline_unlock>
 </root>
