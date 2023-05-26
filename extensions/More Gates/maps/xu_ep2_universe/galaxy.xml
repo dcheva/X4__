@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diff>
+<!-- 1 Great Reef x Atreus Clouds -->
+  <add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">
+    <connection name="ClusterGate603To608" ref="destination" path="../Cluster_603_connection/Cluster_603_Sector001_connection/zones_iHaku_Cluster_603_Sector001_connection/connection_ClusterGate603To608">
+      <macro connection="destination" path="../../../../../Cluster_608_connection/Cluster_608_Sector001_connection/zones_iHaku_Cluster_608_Sector001_connection/connection_ClusterGate608To603"/>
+    </connection>
+  </add>
+  
+  <!-- 2 Emperor's Pride x Sanctuary of Darknesse IV -->
+  <add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">
+    <connection name="ClusterGate605To423" ref="destination" path="../Cluster_605_connection/Cluster_605_Sector001_connection/zones_iHaku_Cluster_605_Sector001_connection/connection_ClusterGate605To423">
+      <macro connection="destination" path="../../../../../Cluster_423_connection/Cluster_423_Sector001_connection/zones_iHaku_Cluster_423_Sector001_connection/connection_ClusterGate423To605"/>
+    </connection>
+  </add>
+
+  <!-- 3 Menelaus Oasis x Mercury -->
+  <add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">
+    <connection name="ClusterGate609To106" ref="destination" path="../Cluster_609_connection/Cluster_609_Sector001_connection/zones_iHaku_Cluster_609_Sector001_connection/connection_ClusterGate609To106">
+      <macro connection="destination" path="../../../../../Cluster_106_connection/Cluster_106_Sector001_connection/zones_iHaku_Cluster_106_Sector001_connection/connection_ClusterGate106To609"/>
+    </connection>
+  </add>
+
+  <!-- 4 Cardnial's Redress x Segaris -->
+  <add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">
+    <connection name="ClusterGate36To113" ref="destination" path="../Cluster_36_connection/Cluster_36_Sector001_connection/zones_iHaku_Cluster_36_Sector001_connection/connection_ClusterGate36To113">
+      <macro connection="destination" path="../../../../../Cluster_113_connection/Cluster_113_Sector001_connection/zones_iHaku_Cluster_113_Sector001_connection/connection_ClusterGate113To36"/>
+    </connection>
+  </add>
+
+  <!-- 5 Hewas Twin V x Ianamus Zura IV -->
+  <add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">
+    <connection name="ClusterGate43To15" ref="destination" path="../Cluster_43_connection/Cluster_43_Sector001_connection/zones_iHaku_Cluster_43_Sector001_connection/connection_ClusterGate43To15">
+      <macro connection="destination" path="../../../../../Cluster_15_connection/Cluster_15_Sector001_connection/zones_iHaku_Cluster_15_Sector001_connection/connection_ClusterGate15To43"/>
+    </connection>
+  </add>
+ 
+  <!-- 6 Asteroid Belt x Ocean of Fantasy -->
+  <add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">
+    <connection name="ClusterGate100To604" ref="destination" path="../Cluster_100_connection/Cluster_100_Sector001_connection/zones_iHaku_Cluster_100_Sector001_connection/connection_ClusterGate100To604">
+      <macro connection="destination" path="../../../../../Cluster_604_connection/Cluster_604_Sector001_connection/zones_iHaku_Cluster_604_Sector001_connection/connection_ClusterGate604To100"/>
+    </connection>
+  </add>
+
+  <!-- 7 Barren Shores x Getsu Fune -->
+  <add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">
+    <connection name="ClusterGate602To48" ref="destination" path="../Cluster_602_connection/Cluster_602_Sector001_connection/zones_iHaku_Cluster_602_Sector001_connection/connection_ClusterGate602To48">
+      <macro connection="destination" path="../../../../../Cluster_48_connection/Cluster_48_Sector001_connection/zones_iHaku_Cluster_48_Sector001_connection/connection_ClusterGate48To602"/>
+    </connection>
+  </add>
+
+  <!-- 8 Company Regard x Tarka's Ravine XVI -->
+  <add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">
+    <connection name="ClusterGate20To410" ref="destination" path="../Cluster_20_connection/Cluster_20_Sector001_connection/zones_iHaku_Cluster_20_Sector001_connection/connection_ClusterGate20To410">
+      <macro connection="destination" path="../../../../../Cluster_410_connection/Cluster_410_Sector001_connection/zones_iHaku_Cluster_410_Sector001_connection/connection_ClusterGate410To20"/>
+    </connection>
+  </add>
+  
+  <!-- 9 Eleventh Hour x Heart of Acrimony II -->
+  <add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">
+    <connection name="ClusterGate411To417" ref="destination" path="../Cluster_411_connection/Cluster_411_Sector001_connection/zones_iHaku_Cluster_411_Sector001_connection/connection_ClusterGate411To417">
+      <macro connection="destination" path="../../../../../Cluster_417_connection/Cluster_417_Sector001_connection/zones_iHaku_Cluster_417_Sector001_connection/connection_ClusterGate417To411"/>
+    </connection>
+  </add>
+
+  <!-- 10 Atiya's Misfortune III x Oort Cloud -->
+  <add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">
+    <connection name="ClusterGate26To116" ref="destination" path="../Cluster_26_connection/Cluster_26_Sector002_connection/zones_iHaku_Cluster_26_Sector002_connection/connection_ClusterGate26To116">
+      <macro connection="destination" path="../../../../../Cluster_116_connection/Cluster_116_Sector001_connection/zones_iHaku_Cluster_116_Sector001_connection/connection_ClusterGate116To26"/>
+    </connection>
+  </add>
+ 
+  <!-- 11 Sacred Relic x Turquoise Sea X -->
+  <add sel="/macros/macro[@name='XU_EP2_universe_macro']/connections">
+    <connection name="ClusterGate23To50" ref="destination" path="../Cluster_23_connection/Cluster_23_Sector001_connection/zones_iHaku_Cluster_23_Sector001_connection/connection_ClusterGate23To50">
+      <macro connection="destination" path="../../../../../Cluster_50_connection/Cluster_50_Sector002_connection/zones_iHaku_Cluster_50_Sector002_connection/connection_ClusterGate50To23"/>
+    </connection>
+  </add>
+</diff>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Galaxy-->
+<diff>
+  <!--Move Farnham's Legend Cluster between Argon Prime and Second Contact-->
+  <replace sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='Cluster_Mod_FarnhamLegend_01_connection']/offset">
+    <offset><position x="-30000000" y="0" z="17320000" /></offset>
+  </replace>
+
+  <!--Remove Gate Connection from Farnham's Legend V to Silent Witness I-->
+  <remove sel="//macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGateMFL01To008']" />
+
+  <!--Remove Gate Connection from Farnham's Legend V to Hatikvah's Choice I-->
+  <remove sel="//macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGateMFL01To029']" />
+
+  <!--Remove Gate Connection from Argon Prime to Second Contact II-->
+  <remove sel="//macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='ClusterGate013To014']" />
+
+  <!--Re-add Gate Connection from Hatikvah's Choice I to Silent Witness I-->
+  <add sel="//macros/macro[@name='XU_EP2_universe_macro']/connections">
+    <connection name="ClusterGate008To029" ref="destination" path="../Cluster_08_connection/Cluster_08_Sector001_connection/Zone004_Cluster_08_Sector001_connection/connection_ClusterGate008To029">
+      <macro connection="destination" path="../../../../../Cluster_29_connection/Cluster_29_Sector001_connection/Zone002_Cluster_29_Sector001_connection/connection_ClusterGate029To008" />
+    </connection>
+  </add>
+
+  <!--Add Gate connection from Farnham's Legend V to Argon Prime-->
+  <add sel="//macros/macro[@name='XU_EP2_universe_macro']/connections">
+    <connection name="ClusterGateMFL01To014" ref="destination" path="../Cluster_Mod_FarnhamLegend_01_connection/Cluster_Mod_FarnhamLegend_01_Sector001_connection/Zone003_Cluster_Mod_FarnhamLegend_01_Sector001_connection/connection_ClusterGateMFL01To014">
+      <macro connection="destination" path="../../../../../Cluster_14_connection/Cluster_14_Sector001_connection/Zone001_Cluster_14_Sector001_connection/connection_ClusterGate014To013" />
+    </connection>
+  </add>
+
+  <!--Add Gate connection from Farnham's Legend V to Second Contact II-->
+  <add sel="//macros/macro[@name='XU_EP2_universe_macro']/connections">
+    <connection name="ClusterGateMFL01To013" ref="destination" path="../Cluster_Mod_FarnhamLegend_01_connection/Cluster_Mod_FarnhamLegend_01_Sector001_connection/Zone002_Cluster_Mod_FarnhamLegend_01_Sector001_connection/connection_ClusterGateMFL01To013">
+      <macro connection="destination" path="../../../../../Cluster_13_connection/Cluster_13_Sector001_connection/Zone003_Cluster_13_Sector001_connection/connection_ClusterGate013To014" />
+    </connection>
+  </add>
+
+</diff>

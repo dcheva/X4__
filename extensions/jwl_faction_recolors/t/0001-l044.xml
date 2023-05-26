@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- order and spacing is shared with 'factions.xml' file for side-by-side viewing -->
+<diff>
+	<replace sel="/language/page[@id='20203']/t[@id='101']/text()">\033#ff00ff98#Player\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='103']/text()">\033#ff00ff98#PLR\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='201']/text()">\033#020#\033X\033#ff0070dd#Argon Federation\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='203']/text()">\033#ff0070dd#ARG\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='301']/text()">\033#010#\033X\033#ff5480a0#Antigone Republic\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='303']/text()">\033#ff5480a0#ANT\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='401']/text()">\033#090#\033X\033#ff8730c9#Godrealm of the Paranid\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='403']/text()">\033#ff8730c9#PAR\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='501']/text()">\033#120#\033X\033#fff48cba#Holy Order of the Pontifex\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='503']/text()">\033#fff48cba#HOP\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='601']/text()">\033#220#\033X\033#fffff468#Teladi Company\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='603']/text()">\033#fffff468#TEL\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='701']/text()">\033#140#\033X\033#ffc7c083#Ministry of Finance\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='703']/text()">\033#ffc7c083#MIN\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='801']/text()">\033#000#\033X\033#ffa330c9#Alliance of the Word\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='803']/text()">\033#ffa330c9#ALI\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='901']/text()">\033#100#\033X\033#ffafe9f0#Hatikvah Free League\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='903']/text()">\033#ffafe9f0#HAT\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1001']/text()">\033#200#\033X\033#ff8f4655#Scale Plate Pact\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1003']/text()">\033#ff8f4655#SCA\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1101']/text()">\033#250#\033X\033#ffc41e3a#Xenon\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1103']/text()">\033#ffc41e3a#XEN\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1301']/text()">\033#160#\033X\033#ff3fc7eb#Queendom of Boron\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1303']/text()">\033#ff3fc7eb#BOR\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1501']/text()">\033#130#\033X\033#ff8788ee#Kha'ak\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1503']/text()">\033#ff8788ee#KHK\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1601']/text()">\033#080#\033X\033#ffc69b6d#Free Families\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1603']/text()">\033#ffC69b6d#FRF\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1701']/text()">\033#070#\033X\033#fffbb298#Fallen Families\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1703']/text()">\033#fffbb298#FAF\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1801']/text()">\033#040#\033X\033#ffffd500#Court of Curbs\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1803']/text()">\033#ffffd500#CUB\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1901']/text()">\033#030#\033X\033#ffffd500#Cabal of Curbs\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='1903']/text()">\033#ffffd500#CAB\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2001']/text()">\033#270#\033X\033#ffff7c0a#Zyarth Patriarchy\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2003']/text()">\033#ffff7c0a#ZYA\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2201']/text()">\033#180#\033X\033#ffff691e#Rhak Patriarchy\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2203']/text()">\033#ffff691e#RHA\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2301']/text()">\033#170#\033X\033#ffbf39d7#Realm of the Trinity\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2303']/text()">\033#ffbf39d7#TRI\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2401']/text()">\033#050#\033X\033#ff33006b#Duke's Buccaneers\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2403']/text()">\033#ff33006b#BUC\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2501']/text()">\033#060#\033X\033#ff33006b#Duke's Tempest\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2503']/text()">\033#ff33006b#TEM\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2601']/text()">\033#110#\033X\033#ff8a0101#Holy Order Faithful\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2603']/text()">\033#ff8a0101#HOF\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2801']/text()">\033#260#\033X\033#ff8a2c53#Yaki\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2803']/text()">\033#ff8a2c53#YAK\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2901']/text()">\033#210#\033X\033#ff41aa9a#Segaris Pioneers\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='2903']/text()">\033#ff41aa9a#PIO\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='3001']/text()">\033#230#\033X\033#ffe1e1ff#Terran Protectorate\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='3003']/text()">\033#ffe1e1ff#TER\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='3201']/text()">\033#190#\033X\033#ff634321#Riptide Rakers\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='3203']/text()">\033#ff634321#RIP\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='3301']/text()">\033#240#\033X\033#ff816363#Vigor Syndicate\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='3303']/text()">\033#ff816363#VIG\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='3401']/text()">\033#150#\033X\033#ff3fc7eb#Provinces Adrift\033X</replace>
+	<replace sel="/language/page[@id='20203']/t[@id='3403']/text()">\033#ff3fc7eb#BOR\033X</replace>
+</diff>

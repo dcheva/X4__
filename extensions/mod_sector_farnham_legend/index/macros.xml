@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- ?xml-stylesheet href="index.xsl" type="text\xsl" ? -->
+<index>
+  <entry name="Cluster_Mod_FarnhamLegend_01_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_clusters" />
+  <entry name="Cluster_Mod_FarnhamLegend_01_Sector001_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_sectors" />
+  <entry name="Cluster_Mod_FarnhamLegend_01_Sector002_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_sectors" />
+  <entry name="Cluster_Mod_FarnhamLegend_01_Sector003_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_sectors" />
+  <entry name="SuperHighway001_Cluster_Mod_FarnhamLegend_01_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_sechighways" />
+  <entry name="SuperHighway002_Cluster_Mod_FarnhamLegend_01_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_sechighways" />
+  <entry name="SuperHighway003_Cluster_Mod_FarnhamLegend_01_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_sechighways" />
+  <entry name="SuperHighway004_Cluster_Mod_FarnhamLegend_01_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_sechighways" />
+  <entry name="SuperHighway005_Cluster_Mod_FarnhamLegend_01_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_sechighways" />
+  <entry name="SuperHighway006_Cluster_Mod_FarnhamLegend_01_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_sechighways" />
+  <entry name="Highway01_Cluster_Mod_FarnhamLegend_01_Sector001_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zonehighways" />
+  <entry name="Highway02_Cluster_Mod_FarnhamLegend_01_Sector001_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zonehighways" />
+  <entry name="tzoneCluster_Mod_FarnhamLegend_01_Sector001SHCon5_GateZone_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="tzoneCluster_Mod_FarnhamLegend_01_Sector001SHCon7_GateZone_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="tzoneCluster_Mod_FarnhamLegend_01_Sector001SHCon8_GateZone_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="tzoneCluster_Mod_FarnhamLegend_01_Sector001SHCon9_GateZone_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone002_Cluster_Mod_FarnhamLegend_01_Sector001_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone003_Cluster_Mod_FarnhamLegend_01_Sector001_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone001_Cluster_Mod_FarnhamLegend_01_Sector001_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone004_Cluster_Mod_FarnhamLegend_01_Sector001_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone005_Cluster_Mod_FarnhamLegend_01_Sector001_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone006_Cluster_Mod_FarnhamLegend_01_Sector001_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="tzoneCluster_Mod_FarnhamLegend_01_Sector002SHCon5_GateZone_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="tzoneCluster_Mod_FarnhamLegend_01_Sector002SHCon9_GateZone_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="tzoneCluster_Mod_FarnhamLegend_01_Sector002SHCon11_GateZone_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="tzoneCluster_Mod_FarnhamLegend_01_Sector002SHCon12_GateZone_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone002_Cluster_Mod_FarnhamLegend_01_Sector002_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone001_Cluster_Mod_FarnhamLegend_01_Sector002_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone003_Cluster_Mod_FarnhamLegend_01_Sector002_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone004_Cluster_Mod_FarnhamLegend_01_Sector002_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone005_Cluster_Mod_FarnhamLegend_01_Sector002_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="tZoneCluster_Mod_FarnhamLegend_01_Sector002_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="tzoneCluster_Mod_FarnhamLegend_01_Sector003SHCon4_GateZone_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="tzoneCluster_Mod_FarnhamLegend_01_Sector003SHCon6_GateZone_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="tzoneCluster_Mod_FarnhamLegend_01_Sector003SHCon10_GateZone_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="tzoneCluster_Mod_FarnhamLegend_01_Sector003SHCon12_GateZone_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone003_Cluster_Mod_FarnhamLegend_01_Sector003_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone002_Cluster_Mod_FarnhamLegend_01_Sector003_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone001_Cluster_Mod_FarnhamLegend_01_Sector003_macro" value="extensions\mod_sector_farnham_legend\maps\XU_ep2_universe\farnham_legend_zones" />
+  <entry name="Zone007_Cluster_Mod_FarnhamLegend_502_Sector001_macro" value="extensions\mod_sector_farnham_legend\ego_dlc_pirate\maps\XU_ep2_universe\dlc_pirate_zones" />
+</index>

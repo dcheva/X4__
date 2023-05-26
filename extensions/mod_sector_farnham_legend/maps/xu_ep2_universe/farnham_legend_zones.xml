@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<macros>
+  <macro name="tzoneCluster_Mod_FarnhamLegend_01_Sector001SHCon5_GateZone_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="SHCon5_gate" />
+    </connections>
+  </macro>
+  <macro name="tzoneCluster_Mod_FarnhamLegend_01_Sector001SHCon7_GateZone_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="SHCon7_gate" />
+    </connections>
+  </macro>
+  <macro name="tzoneCluster_Mod_FarnhamLegend_01_Sector001SHCon8_GateZone_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="SHCon8_gate" />
+    </connections>
+  </macro>
+  <macro name="tzoneCluster_Mod_FarnhamLegend_01_Sector001SHCon9_GateZone_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="SHCon9_gate" />
+    </connections>
+  </macro>
+
+  <!--Silent Witness I Gate-->
+  <macro name="Zone002_Cluster_Mod_FarnhamLegend_01_Sector001_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="Highway02Connection02_gate">
+        <offset>
+          <position x="23091.765625" y="0" z="35673.91015625" />
+        </offset>
+      </connection>
+      <connection ref="Highway01Connection01_gate">
+        <offset>
+          <position x="22591.765625" y="0" z="36539.93359375" />
+        </offset>
+      </connection>
+      <connection name="connection_ClusterGateMFL01To008" ref="gates">
+        <offset>
+          <position x="22841.765625" y="500" z="36106.91796875" />
+          <quaternion qx="0" qy="-0.8660253882" qz="0" qw="0.5" />
+        </offset>
+        <macro ref="props_gates_anc_gate_macro" connection="space" />
+      </connection>
+    </connections>
+  </macro>
+
+  <!--Hatikva's Choice I Gate-->
+  <macro name="Zone003_Cluster_Mod_FarnhamLegend_01_Sector001_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="Highway02Connection01_gate">
+        <offset>
+          <position x="-30328.125" y="0" z="-23515.392578125" />
+        </offset>
+      </connection>
+      <connection ref="Highway01Connection02_gate">
+        <offset>
+          <position x="-30670.134765625" y="0" z="-22575.69921875" />
+        </offset>
+      </connection>
+      <connection name="connection_ClusterGateMFL01To029" ref="gates">
+        <offset>
+          <position x="-30499.130859375" y="500" z="-23045.54296875" />
+          <quaternion qx="0" qy="0.5735763907" qz="0" qw="0.8191520572" />
+        </offset>
+        <macro ref="props_gates_anc_gate_macro" connection="space" />
+      </connection>
+    </connections>
+  </macro>
+
+  <!--Windfall III The Hoard Gate-->
+  <macro name="Zone006_Cluster_Mod_FarnhamLegend_01_Sector001_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection name="connection_ClusterGateMFL01To502" ref="gates">
+        <offset>
+          <position x="-41242.138671875" y="0" z="-40647.4609375" />
+          <quaternion qx="0" qy="-0.2164397687" qz="0" qw="0.9762960076" />
+        </offset>
+        <macro ref="props_gates_anc_gate_macro" connection="space" />
+      </connection>
+    </connections>
+  </macro>
+
+  <macro name="Zone001_Cluster_Mod_FarnhamLegend_01_Sector001_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="Highway01Connection02_gate">
+        <offset>
+          <position x="-14387.787109375" y="0" z="-1117.02734375" />
+        </offset>
+      </connection>
+      <connection ref="Highway01Connection01_gate">
+        <offset>
+          <position x="-14367.095703125" y="0" z="-7551.6508789063" />
+        </offset>
+      </connection>
+    </connections>
+  </macro>
+  <macro name="Zone004_Cluster_Mod_FarnhamLegend_01_Sector001_macro" class="zone">
+    <component ref="standardzone" />
+  </macro>
+  <macro name="Zone005_Cluster_Mod_FarnhamLegend_01_Sector001_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection name="asteroid_special_lm_01_macro2" ref="asteroids">
+        <offset>
+          <position x="9462.158203125" y="-301.4678955078" z="8560.0888671875" />
+          <quaternion qx="0" qy="0.8433912992" qz="0" qw="0.5372997522" />
+        </offset>
+        <macro ref="asteroid_special_lm_01_macro" connection="space" />
+      </connection>
+      <connection name="asteroid_special_lm_01_macro3" ref="asteroids">
+        <offset>
+          <position x="-14157.1044921875" y="-301.4678955078" z="2793.4875488281" />
+          <quaternion qx="-0.7859630585" qy="-0.3906999528" qz="-0.4094664454" qw="-0.2489033341" />
+        </offset>
+        <macro ref="asteroid_special_lm_01_macro" connection="space" />
+      </connection>
+      <connection name="asteroid_special_lm_01_macro" ref="asteroids">
+        <offset>
+          <position x="4238.6474609375" y="-301.4678955078" z="-12349.5791015625" />
+          <quaternion qx="0" qy="0" qz="0" qw="1" />
+        </offset>
+        <macro ref="asteroid_special_lm_01_macro" connection="space" />
+      </connection>
+    </connections>
+  </macro>
+  <macro name="tzoneCluster_Mod_FarnhamLegend_01_Sector002SHCon5_GateZone_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="SHCon5_gate" />
+    </connections>
+  </macro>
+  <macro name="tzoneCluster_Mod_FarnhamLegend_01_Sector002SHCon9_GateZone_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="SHCon9_gate" />
+    </connections>
+  </macro>
+  <macro name="tzoneCluster_Mod_FarnhamLegend_01_Sector002SHCon11_GateZone_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="SHCon11_gate" />
+    </connections>
+  </macro>
+  <macro name="tzoneCluster_Mod_FarnhamLegend_01_Sector002SHCon12_GateZone_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="SHCon12_gate" />
+    </connections>
+  </macro>
+  <macro name="Zone002_Cluster_Mod_FarnhamLegend_01_Sector002_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="Highway02Connection01_gate">
+        <offset>
+          <position x="2757.8125" y="0" z="10489.2578125" />
+        </offset>
+      </connection>
+      <connection ref="Highway01Connection02_gate">
+        <offset>
+          <position x="10765.625" y="0" z="10539.0625" />
+        </offset>
+      </connection>
+      <connection ref="Highway03Connection02_gate">
+        <offset>
+          <position x="-11517.578125" y="0" z="600.5859375" />
+        </offset>
+      </connection>
+    </connections>
+  </macro>
+  <macro name="Zone001_Cluster_Mod_FarnhamLegend_01_Sector002_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="Highway02Connection02_gate">
+        <offset>
+          <position x="16863.28125" y="0" z="-6314.94140625" />
+        </offset>
+      </connection>
+      <connection ref="Highway01Connection01_gate">
+        <offset>
+          <position x="16574.21875" y="0" z="2729.00390625" />
+        </offset>
+      </connection>
+      <connection ref="Highway03Connection01_gate">
+        <offset>
+          <position x="3498.046875" y="0" z="-15685.05859375" />
+        </offset>
+      </connection>
+    </connections>
+  </macro>
+  <macro name="Zone003_Cluster_Mod_FarnhamLegend_01_Sector002_macro" class="zone">
+    <component ref="standardzone" />
+  </macro>
+  <macro name="Zone004_Cluster_Mod_FarnhamLegend_01_Sector002_macro" class="zone">
+    <component ref="standardzone" />
+  </macro>
+  <macro name="Zone005_Cluster_Mod_FarnhamLegend_01_Sector002_macro" class="zone">
+    <component ref="standardzone" />
+  </macro>
+  <macro name="tZoneCluster_Mod_FarnhamLegend_01_Sector002_macro" class="zone">
+    <component ref="standardzone" />
+  </macro>
+  <macro name="tzoneCluster_Mod_FarnhamLegend_01_Sector003SHCon4_GateZone_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="SHCon4_gate" />
+    </connections>
+  </macro>
+  <macro name="tzoneCluster_Mod_FarnhamLegend_01_Sector003SHCon6_GateZone_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="SHCon6_gate" />
+    </connections>
+  </macro>
+  <macro name="tzoneCluster_Mod_FarnhamLegend_01_Sector003SHCon10_GateZone_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="SHCon10_gate" />
+    </connections>
+  </macro>
+  <macro name="tzoneCluster_Mod_FarnhamLegend_01_Sector003SHCon12_GateZone_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="SHCon12_gate" />
+    </connections>
+  </macro>
+  <macro name="Zone003_Cluster_Mod_FarnhamLegend_01_Sector003_macro" class="zone">
+    <component ref="standardzone" />
+    <connections>
+      <connection ref="Highway01Connection02_gate">
+        <offset>
+          <position x="-9914.0625" y="0" z="-41765.625" />
+        </offset>
+      </connection>
+      <connection ref="Highway01Connection01_gate">
+        <offset>
+          <position x="-14882.8125" y="0" z="-41691.40625" />
+        </offset>
+      </connection>
+    </connections>
+  </macro>
+  <macro name="Zone002_Cluster_Mod_FarnhamLegend_01_Sector003_macro" class="zone">
+    <component ref="standardzone" />
+  </macro>
+  <macro name="Zone001_Cluster_Mod_FarnhamLegend_01_Sector003_macro" class="zone">
+    <component ref="standardzone" />
+  </macro>
+</macros>

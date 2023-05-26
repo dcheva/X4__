@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content id="SectorList"
+         name="Mycu: Sector list"
+         author="Mycu"
+         version="110"
+         date="2022-02-10"
+         lastupdate="1682359579"
+         save="false"
+         enabled="1"
+         description="Adds list of known sectors to the map with current resources and buy/sell offers list.">
+    <dependency id="ws_2042901274" optional="false" name="SirNukes Mod Support APIs"/>
+    <dependency id="kuerteeUIExtensionsAndHUD" optional="false" name="kuertee UI Extensions and HUD"/>
+</content>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diff>
+	<replace sel="/icons/icon[@name='ship_s_fight_01']">
+		<icon name="ship_s_fight_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_s_fighter_01.tga" height="160" width="160"></icon>
+	</replace>
+	<replace sel="/icons/icon[@name='ship_m_fight_01']">
+		<icon name="ship_m_fight_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_m_corvette_01.tga" height="208" width="208"></icon>
+	</replace>
+	<replace sel="/icons/icon[@name='ship_l_fight_01']">
+		<icon name="ship_l_fight_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_l_destroyer_01.tga" height="192" width="192"></icon>
+	</replace>
+	<replace sel="/icons/icon[@name='ship_xl_fight_01']">
+		<icon name="ship_xl_fight_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_xl_battleship_01.tga" height="192" width="192"></icon>
+	</replace>
+	
+	<replace sel="/icons/icon[@name='ship_s_trade_01']">
+		<icon name="ship_s_trade_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_s_courier_01.tga" height="160" width="160"></icon>
+	</replace>
+	<replace sel="/icons/icon[@name='ship_m_trade_01']">
+		<icon name="ship_m_trade_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_m_transport_01.tga" height="160" width="160"></icon>
+	</replace>
+	<replace sel="/icons/icon[@name='ship_l_trade_01']">
+		<icon name="ship_l_trade_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_l_freighter_01.tga" height="160" width="160"></icon>
+	</replace>
+	
+	<replace sel="/icons/icon[@name='ship_s_mine_01']">
+		<icon name="ship_s_mine_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_s_miner_mineral_01.tga" height="160" width="160"></icon>
+	</replace>
+	<replace sel="/icons/icon[@name='ship_m_mine_01']">
+		<icon name="ship_m_mine_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_m_miner_mineral_01.tga" height="160" width="160"></icon>
+	</replace>
+	<replace sel="/icons/icon[@name='ship_l_mine_01']">
+		<icon name="ship_l_mine_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_l_miner_mineral_01.tga" height="160" width="160"></icon>
+	</replace>
+	
+	<replace sel="/icons/icon[@name='ship_xl_build_01']">
+		<icon name="ship_xl_build_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_xl_builder_01.tga" height="128" width="128"></icon>
+	</replace>
+	
+	<replace sel="/icons/icon[@name='ship_l_fight_light_01']">
+		<icon name="ship_l_fight_light_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_l_cruiser_01.tga" height="128" width="128"></icon>
+	</replace>
+	<!--<replace sel="/icons/icon[@name='ship_xl_neutral_01']">
+		<icon name="ship_xl_neutral_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_carrier_l.tga" height="160" width="160"></icon>
+	</replace>
+	
+	<replace sel="/icons/icon[@name='mapob_playerhq']">
+		<icon name="mapob_playerhq" texture="extensions\jwl_shipicons\assets\fx\gui\textures\map_objects\mapob_playerhq.tga" height="160" width="160"></icon>
+	</replace>
+	<replace sel="/icons/icon[@name='mapob_piratestation']">
+		<icon name="mapob_piratestation" texture="extensions\jwl_shipicons\assets\fx\gui\textures\map_objects\mapob_piratestation.tga" height="160" width="160"></icon>
+	</replace>
+	<replace sel="/icons/icon[@name='mapob_piratestation_headquarter']">
+		<icon name="mapob_piratestation_headquarter" texture="extensions\jwl_shipicons\assets\fx\gui\textures\map_objects\mapob_piratestation_headquarter.tga" height="160" width="160"></icon>
+	</replace>
+	<replace sel="/icons/icon[@name='si_piratestation']">
+		<icon name="si_piratestation" texture="extensions\jwl_shipicons\assets\fx\gui\textures\stationicon\si_piratestation.tga" height="160" width="160"></icon>
+	</replace>
+	<replace sel="/icons/icon[@name='si_playerhq']">
+		<icon name="si_playerhq" texture="extensions\jwl_shipicons\assets\fx\gui\textures\stationicon\si_playerhq.tga" height="160" width="160"></icon>
+	</replace>-->
+	
+	<add sel="/icons">
+		<icon name="ship_s_fight_02" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_s_fighter_02.tga" height="172" width="172"></icon>
+		<icon name="ship_s_scout_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_s_scout_01.tga" height="160" width="160"></icon>
+		
+		<icon name="ship_m_fight_02" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_m_gunboat_01.tga" height="208" width="208"></icon>
+		<icon name="ship_m_fight_03" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_m_frigate_01.tga" height="208" width="208"></icon>
+		<icon name="ship_m_mine_02" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_m_miner_gas_01.tga" height="160" width="160"></icon>
+		
+		<icon name="ship_l_mine_02" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_l_miner_gas_01.tga" height="160" width="160"></icon>
+		<icon name="ship_l_carrier_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_l_carrier_01.tga" height="160" width="160"></icon>
+		<icon name="ship_l_cruiser_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_l_cruiser_01.tga" height="192" width="192"></icon>
+		
+		<icon name="ship_xl_carrier_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_xl_carrier_01.tga" height="160" width="160"></icon>
+		<icon name="ship_xl_miner_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_xl_miner_01.tga" height="128" width="128"></icon>
+		
+		<icon name="shipicon_l_xen_k_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_l_xen_k_01.tga" height="192" width="192"></icon>
+		<icon name="shipicon_m_xen_p_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_m_xen_p_01.tga" height="172" width="172"></icon>
+		<icon name="shipicon_m_xen_s_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_m_xen_s_01.tga" height="172" width="172"></icon>
+		<icon name="shipicon_s_xen_m_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_s_xen_m_01.tga" height="128" width="128"></icon>
+		<icon name="shipicon_s_xen_n_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_s_xen_n_01.tga" height="128" width="128"></icon>
+		<icon name="shipicon_s_xen_t_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_s_xen_t_01.tga" height="128" width="128"></icon>
+		<icon name="shipicon_xl_xen_i_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_xl_xen_i_01.tga" height="208" width="208"></icon>
+		
+		<icon name="shipicon_s_khk_forager_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_s_khk_forager_01.tga" height="128" width="128"></icon>
+		<icon name="shipicon_s_khk_hiveguard_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_s_khk_hiveguard_01.tga" height="160" width="160"></icon>
+		<icon name="shipicon_s_khk_protector_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_s_khk_protector_01.tga" height="128" width="128"></icon>
+		<icon name="shipicon_s_khk_queenguard_01" texture="extensions\jwl_shipicons\assets\fx\gui\textures\shipicon\shipicon_s_khk_queenguard_01.tga" height="160" width="160"></icon>
+	</add>
+</diff>

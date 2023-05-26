@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<language>
+  <!-- Farnham's Legend -->
+  <page id="794516580" title="mod_sector_farnham_legend" description="" voice="no" >
+    <t id="1001">Farnham's Legend</t>
+    <t id="1002">{20005,9024}(Farnham's Legend)</t>
+    <t id="1003">Originally discovered and declared lifeless by the earth science vessel 'Winterblossom', under the command of Rene Farnham, this system was a lawless community of high-tech criminals. The illegal computer and weapons systems covertly built here were renowned for innovation if not reliability. None of which you will find publicly available.\n\nThe hackers and cyberpunks who operated here were notoriously paranoid and were heavily guarded by armed enforcers.</t>
+    <t id="1004">{20005,9024} {20402,5}(Farnham's Legend V)</t>
+    <t id="1005">Originally discovered and declared lifeless by the earth science vessel 'Winterblossom', under the command of Rene Farnham, this system was a lawless community of high-tech criminals. The illegal computer and weapons systems covertly built here were renowned for innovation if not reliability. None of which you will find publicly available.\n\nThe hackers and cyberpunks who operated here were notoriously paranoid and were heavily guarded by armed enforcers.</t>
+    <t id="1006">{20005,9024} {20402,7}(Farnham's Legend VII)</t>
+    <t id="1007">Originally discovered and declared lifeless by the earth science vessel 'Winterblossom', under the command of Rene Farnham, this system was a lawless community of high-tech criminals. The illegal computer and weapons systems covertly built here were renowned for innovation if not reliability. None of which you will find publicly available.\n\nThe hackers and cyberpunks who operated here were notoriously paranoid and were heavily guarded by armed enforcers.</t>
+    <t id="1008">{20005,9024} {20402,9}(Farnham's Legend IX)</t>
+    <t id="1009">Originally discovered and declared lifeless by the earth science vessel 'Winterblossom', under the command of Rene Farnham, this system was a lawless community of high-tech criminals. The illegal computer and weapons systems covertly built here were renowned for innovation if not reliability. None of which you will find publicly available.\n\nThe hackers and cyberpunks who operated here were notoriously paranoid and were heavily guarded by armed enforcers.</t>
+    <t id="1010">Worlorn(Farnham's Legend)</t>
+  </page>
+</language>

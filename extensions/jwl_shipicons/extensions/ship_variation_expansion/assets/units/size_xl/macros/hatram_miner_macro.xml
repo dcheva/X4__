@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+	<replace sel="/macros/macro[@name='hatram_miner_macro']/properties/identification">  
+      <identification name="{6920213,4}" basename="{20101,120401}" description="{6920213,3}" variation="{20111,3101}" shortvariation="{20111,3101}" icon="ship_xl_miner_01" />
+	</replace>
+</diff>

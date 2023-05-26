@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content id="jwl_faction_recolors" name="JWL: Faction Recolors" description="Recolors factions for increased readability and colors their names in certain menus." author="Jewels" version="100" date="2023-05-12" save="false" enabled="1">
+	<dependency id="ego_dlc_boron" optional="true" name="CE"></dependency>
+	<dependency id="ego_dlc_pirate" optional="true" name="ToA"></dependency>
+	<dependency id="ego_dlc_split" optional="true" name="SV"></dependency>
+	<dependency id="ego_dlc_terran" optional="true" name="CoH"></dependency>
+</content>

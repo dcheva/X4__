@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content id="flat_ui" name="Flat_UI" description="Делает интерфейс (сообщения и информация о цели) плоскими, вместо псевдо 3D" author="Grimskull92" version="001" date="2022-06-11" save="0" enabled="1">
+ <text language="7" name="Flat_UI" description="Делает интерфейс (сообщения и информация о цели) плоскими, вместо псевдо 3В" author="Grimskull92" />
+ <text language="33" name="Flat_UI" description="Makes the interface (messages and target information) flat, instead of pseudo 3D" author="Grimskull" />
+ <text language="34" name="Flat_UI" description="Makes the interface (messages and target information) flat, instead of pseudo 3D" author="Grimskull" />
+ <text language="39" name="Flat_UI" description="Makes the interface (messages and target information) flat, instead of pseudo 3D" author="Grimskull" />
+ <text language="44" name="Flat_UI" description="Makes the interface (messages and target information) flat, instead of pseudo 3D" author="Grimskull" />
+ <text language="49" name="Flat_UI" description="Makes the interface (messages and target information) flat, instead of pseudo 3D" author="Grimskull" />
+ <text language="55" name="Flat_UI" description="Makes the interface (messages and target information) flat, instead of pseudo 3D" author="Grimskull" />
+ <text language="81" name="Flat_UI" description="Makes the interface (messages and target information) flat, instead of pseudo 3D" author="Grimskull" />
+ <text language="82" name="Flat_UI" description="Makes the interface (messages and target information) flat, instead of pseudo 3D" author="Grimskull" />
+ <text language="86" name="Flat_UI" description="Makes the interface (messages and target information) flat, instead of pseudo 3D" author="Grimskull" />
+ <text language="88" name="Flat_UI" description="Makes the interface (messages and target information) flat, instead of pseudo 3D" author="Grimskull" />
+</content>

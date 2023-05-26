@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+    <!-- 2 Litany of Fury IX x Sanctuary of Darknesse IV -->
+	<add sel="//macros">
+		<macro name="zones_iHaku_Cluster_423_Sector001_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate423To605" ref="gates">
+					<offset>
+						<position x="1" y="1" z="1"/>
+						<rotation yaw="90" />
+					</offset>
+					<macro ref="props_gates_anc_gate_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+	</add>
+	
+    <!-- 8 Tarka's Ravine XVI x Company Regard -->
+	<add sel="//macros">
+		<macro name="zones_iHaku_Cluster_410_Sector001_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate410To20" ref="gates">
+					<offset>
+						<position x="1" y="1" z="1"/>
+						<rotation yaw="0" />
+					</offset>
+					<macro ref="props_gates_anc_gate_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+	</add>
+
+
+	<!-- 9 Heart of Acrimony II x Eleventh Hour -->
+	<add sel="//macros">
+		<macro name="zones_iHaku_Cluster_411_Sector001_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate411To417" ref="gates">
+					<offset>
+						<position x="1" y="1" z="1"/>
+						<rotation yaw="190" />
+					</offset>
+					<macro ref="props_gates_anc_gate_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+	</add>
+
+    <!-- 9 Eleventh Hour x Heart of Acrimony II -->
+	<add sel="//macros">
+		<macro name="zones_iHaku_Cluster_417_Sector001_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate417To411" ref="gates">
+					<offset>
+						<position x="1" y="1" z="1"/>
+						<rotation yaw="225" />
+					</offset>
+					<macro ref="props_gates_anc_gate_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+	</add>
+</diff>

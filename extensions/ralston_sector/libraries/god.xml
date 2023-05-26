@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+
+	<add sel="/god/stations">
+
+    <station id="arg_defence_Cluster08_sector001_HB" race="argon" owner="argon" type="factory">
+      <quotas>
+        <quota galaxy="1" sector="1" />
+      </quotas>
+      <location class="sector" macro="homebrew_cluster08_sector001_macro"  />
+      <station>
+        <select faction="argon" tags="[defence]" />
+      </station>
+    </station>
+
+	</add>
+
+
+</diff>

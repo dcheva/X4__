@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<diff  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!-- Windfall III The Hoard Jumpgate -->
+  <replace sel="//macros/macro[@name='Cluster_502_Sector001_macro']/connections/connection[@name='Zone007_Cluster_Mod_FarnhamLegend_502_Sector001_connection']/offset">
+    <offset>
+      <position x="-161009.3" y="0" z="-32492.19" />
+    </offset>
+  </replace>
+</diff>

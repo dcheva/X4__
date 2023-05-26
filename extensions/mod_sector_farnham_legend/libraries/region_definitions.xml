@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<regions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="region_definitions.xsd">
+
+  <region name="region_mod_farnham_legend_sector001_resource_field" density="1" rotation="0">
+    <boundary class="cylinder">
+      <size r="1000000" linear="7500" />
+    </boundary>
+    <falloff>
+      <lateral>
+        <step position="0.0" value="0.0" />
+        <step position="0.1" value="1.0" />
+        <step position="0.9" value="1.0" />
+        <step position="1.0" value="0.0" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="1.0" />
+        <step position="0.3" value="1.0" />
+        <step position="0.5" value="0.9" />
+        <step position="0.9" value="0.4" />
+        <step position="1.0" value="0.0" />
+      </radial>
+    </falloff>
+    <fields>
+      <!--Lockboxes-->
+      <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1" />
+      <!--Lockboxes end-->
+
+      <volumetricfog medium="helium" texture="assets/textures/environments/fog_maskrnd_07" lodrule="nebulafar" size="10000" sizevariation="0.84" densityfactor="0.25" rotation="360" rotationvariation="0.5" noisescale="10000" seed="30214" minnoisevalue="0.350" maxnoisevalue="1.0" distancefactor="0.3" />
+      <!--nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.0" uniformred="188" uniformgreen="55" uniformblue="23" uniformdensity="0.50" backgroundfog="false" resources="hydrogen" fogdistance="15000" /-->
+      <nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.0" uniformred="188" uniformgreen="55" uniformblue="23" uniformdensity="0.50" backgroundfog="false" resources="helium" fogdistance="15000" />
+      <!--nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.0" uniformred="188" uniformgreen="55" uniformblue="23" uniformdensity="0.50" backgroundfog="false" resources="methane" fogdistance="15000" /-->
+
+      <!--asteroid ref="env_ast_ore_l_01_macro" lodrule="asteroidxl" densityfactor="0.75" rotation="360" rotationvariation="4" noisescale="4000" seed="26041984" minnoisevalue="0.2" maxnoisevalue="1" /-->
+      <!--asteroid ref="env_ast_ore_l_02_macro" lodrule="asteroidxl" densityfactor="0.75" rotation="360" rotationvariation="4" noisescale="4000" seed="26041984" minnoisevalue="0.2" maxnoisevalue="1" /-->
+      <!--asteroid ref="env_ast_ore_m_01_macro" densityfactor="0.75" rotation="360" rotationvariation="4" noisescale="4000" seed="26041984" minnoisevalue="0.2" maxnoisevalue="1" /-->
+      <!--asteroid ref="env_ast_ore_m_02_macro" densityfactor="0.75" rotation="360" rotationvariation="4" noisescale="4000" seed="26041984" minnoisevalue="0.2" maxnoisevalue="1" /-->
+      <!--asteroid groupref="asteroid_highyield_v1" lodrule="asteroidxl" densityfactor="0.05" rotation="36" rotationvariation="4" noisescale="24000" seed="26041984" minnoisevalue="0.7" maxnoisevalue="1" yieldvariation="0" /-->
+      <asteroid groupref="asteroid_highyield_v1" lodrule="asteroidxl" densityfactor="0.15" rotation="36" rotationvariation="4" noisescale="24000" seed="26041984" minnoisevalue="0.7" maxnoisevalue="1" />
+      <asteroid groupref="asteroid_ore_l" densityfactor="1.5" rotation="360" rotationvariation="4" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" yieldvariation="0" />
+      <asteroid groupref="asteroid_ore_m" densityfactor="3.5" rotation="360" rotationvariation="8" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" yieldvariation="0" />
+      <!--asteroid groupref="asteroid_highyield_sil_v1" lodrule="asteroidxl" densityfactor="0.15" rotation="36" rotationvariation="4" noisescale="24000" seed="26041984" minnoisevalue="0.7" maxnoisevalue="1" /-->
+      <!--asteroid groupref="asteroid_silicon_l" densityfactor="1.5" rotation="360" rotationvariation="4" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" /-->
+      <!--asteroid groupref="asteroid_silicon_m" densityfactor="3.5" rotation="360" rotationvariation="8" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" /-->
+      <asteroid groupref="asteroid_nividium_l" densityfactor="1.5" rotation="360" rotationvariation="4" noisescale="1500" seed="2001" minnoisevalue="0.8" maxnoisevalue="1" />
+      <asteroid groupref="asteroid_nividium_m" densityfactor="2.25" rotation="360" rotationvariation="8" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" />
+      <asteroid groupref="asteroid_ice_l" densityfactor="1" rotation="0" rotationvariation="8" noisescale="5000" seed="2001" minnoisevalue="0.75" maxnoisevalue="1" />
+      <asteroid groupref="asteroid_ice_m" densityfactor="2" rotation="0" rotationvariation="16" noisescale="5000" seed="2001" minnoisevalue="0.75" maxnoisevalue="1" />
+    </fields>
+    <resources>
+      <!--resource ware="methane" yield="high" /-->
+      <resource ware="helium" yield="high" />
+      <!--resource ware="hydrogen" yield="high" /-->
+      <resource ware="ore" yield="high" />
+      <!--resource ware="silicon" yield="high" /-->
+      <resource ware="ice" yield="medium" />
+      <resource ware="nividium" yield="high" />
+    </resources>
+  </region>
+
+  <region name="region_mod_farnham_legend_sector002_resource_field" density="1" rotation="0">
+    <boundary class="cylinder">
+      <size r="1000000" linear="7500" />
+    </boundary>
+    <falloff>
+      <lateral>
+        <step position="0.0" value="0.0" />
+        <step position="0.1" value="1.0" />
+        <step position="0.9" value="1.0" />
+        <step position="1.0" value="0.0" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="1.0" />
+        <step position="0.3" value="1.0" />
+        <step position="0.5" value="0.9" />
+        <step position="0.9" value="0.4" />
+        <step position="1.0" value="0.0" />
+      </radial>
+    </falloff>
+    <fields>
+      <!--Lockboxes-->
+      <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1" />
+      <!--Lockboxes end-->
+
+      <volumetricfog medium="helium" texture="assets/textures/environments/fog_maskrnd_07" lodrule="nebulafar" size="10000" sizevariation="0.84" densityfactor="0.25" rotation="360" rotationvariation="0.5" noisescale="10000" seed="30214" minnoisevalue="0.350" maxnoisevalue="1.0" distancefactor="0.3" />
+      <!--nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.0" uniformred="188" uniformgreen="55" uniformblue="23" uniformdensity="0.50" backgroundfog="false" resources="hydrogen" fogdistance="15000" /-->
+      <!--nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.0" uniformred="188" uniformgreen="55" uniformblue="23" uniformdensity="0.50" backgroundfog="false" resources="helium" fogdistance="15000" /-->
+      <nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.0" uniformred="188" uniformgreen="55" uniformblue="23" uniformdensity="0.50" backgroundfog="false" resources="methane" fogdistance="15000" />
+
+      <!--asteroid ref="env_ast_ore_l_01_macro" lodrule="asteroidxl" densityfactor="0.75" rotation="360" rotationvariation="4" noisescale="4000" seed="26041984" minnoisevalue="0.2" maxnoisevalue="1" /-->
+      <!--asteroid ref="env_ast_ore_l_02_macro" lodrule="asteroidxl" densityfactor="0.75" rotation="360" rotationvariation="4" noisescale="4000" seed="26041984" minnoisevalue="0.2" maxnoisevalue="1" /-->
+      <!--asteroid ref="env_ast_ore_m_01_macro" densityfactor="0.75" rotation="360" rotationvariation="4" noisescale="4000" seed="26041984" minnoisevalue="0.2" maxnoisevalue="1" /-->
+      <!--asteroid ref="env_ast_ore_m_02_macro" densityfactor="0.75" rotation="360" rotationvariation="4" noisescale="4000" seed="26041984" minnoisevalue="0.2" maxnoisevalue="1" /-->
+      <!--asteroid groupref="asteroid_highyield_v1" lodrule="asteroidxl" densityfactor="0.05" rotation="36" rotationvariation="4" noisescale="24000" seed="26041984" minnoisevalue="0.7" maxnoisevalue="1" yieldvariation="0" /-->
+      <!--asteroid groupref="asteroid_highyield_v1" lodrule="asteroidxl" densityfactor="0.15" rotation="36" rotationvariation="4" noisescale="24000" seed="26041984" minnoisevalue="0.7" maxnoisevalue="1" /-->
+      <!--asteroid groupref="asteroid_ore_l" densityfactor="1.5" rotation="360" rotationvariation="4" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" yieldvariation="0" /-->
+      <!--asteroid groupref="asteroid_ore_m" densityfactor="3.5" rotation="360" rotationvariation="8" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" yieldvariation="0" /-->
+      <asteroid groupref="asteroid_highyield_sil_v1" lodrule="asteroidxl" densityfactor="0.15" rotation="36" rotationvariation="4" noisescale="24000" seed="26041984" minnoisevalue="0.7" maxnoisevalue="1" />
+      <asteroid groupref="asteroid_silicon_l" densityfactor="1.5" rotation="360" rotationvariation="4" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" />
+      <asteroid groupref="asteroid_silicon_m" densityfactor="3.5" rotation="360" rotationvariation="8" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" />
+      <!--asteroid groupref="asteroid_nividium_l" densityfactor="1.5" rotation="360" rotationvariation="4" noisescale="1500" seed="2001" minnoisevalue="0.8" maxnoisevalue="1" /-->
+      <!--asteroid groupref="asteroid_nividium_m" densityfactor="2.25" rotation="360" rotationvariation="8" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" /-->
+      <asteroid groupref="asteroid_ice_l" densityfactor="1" rotation="0" rotationvariation="8" noisescale="5000" seed="2001" minnoisevalue="0.75" maxnoisevalue="1" />
+      <asteroid groupref="asteroid_ice_m" densityfactor="2" rotation="0" rotationvariation="16" noisescale="5000" seed="2001" minnoisevalue="0.75" maxnoisevalue="1" />
+    </fields>
+    <resources>
+      <resource ware="methane" yield="high" />
+      <!--resource ware="helium" yield="high" /-->
+      <!--resource ware="hydrogen" yield="high" /-->
+      <!--resource ware="ore" yield="high" /-->
+      <resource ware="silicon" yield="high" />
+      <resource ware="ice" yield="medium" />
+      <!--resource ware="nividium" yield="high" /-->
+    </resources>
+  </region>
+
+  <region name="region_mod_farnham_legend_sector003_resource_field" density="1" rotation="0">
+    <boundary class="cylinder">
+      <size r="1000000" linear="7500" />
+    </boundary>
+    <falloff>
+      <lateral>
+        <step position="0.0" value="0.0" />
+        <step position="0.1" value="1.0" />
+        <step position="0.9" value="1.0" />
+        <step position="1.0" value="0.0" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="1.0" />
+        <step position="0.3" value="1.0" />
+        <step position="0.5" value="0.9" />
+        <step position="0.9" value="0.4" />
+        <step position="1.0" value="0.0" />
+      </radial>
+    </falloff>
+    <fields>
+      <!--Lockboxes-->
+      <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1" />
+      <!--Lockboxes end-->
+
+      <volumetricfog medium="helium" texture="assets/textures/environments/fog_maskrnd_07" lodrule="nebulafar" size="10000" sizevariation="0.84" densityfactor="0.25" rotation="360" rotationvariation="0.5" noisescale="10000" seed="30214" minnoisevalue="0.350" maxnoisevalue="1.0" distancefactor="0.3" />
+      <nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.0" uniformred="188" uniformgreen="55" uniformblue="23" uniformdensity="0.50" backgroundfog="false" resources="hydrogen" fogdistance="15000" />
+      <!--nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.0" uniformred="188" uniformgreen="55" uniformblue="23" uniformdensity="0.50" backgroundfog="false" resources="helium" fogdistance="15000" /-->
+      <!--nebula ref="fogpattern_v2_macro" localred="16" localgreen="19" localblue="22" localdensity="0.0" uniformred="188" uniformgreen="55" uniformblue="23" uniformdensity="0.50" backgroundfog="false" resources="methane" fogdistance="15000" /-->
+
+      <!--asteroid ref="env_ast_ore_l_01_macro" lodrule="asteroidxl" densityfactor="0.75" rotation="360" rotationvariation="4" noisescale="4000" seed="26041984" minnoisevalue="0.2" maxnoisevalue="1" /-->
+      <!--asteroid ref="env_ast_ore_l_02_macro" lodrule="asteroidxl" densityfactor="0.75" rotation="360" rotationvariation="4" noisescale="4000" seed="26041984" minnoisevalue="0.2" maxnoisevalue="1" /-->
+      <!--asteroid ref="env_ast_ore_m_01_macro" densityfactor="0.75" rotation="360" rotationvariation="4" noisescale="4000" seed="26041984" minnoisevalue="0.2" maxnoisevalue="1" /-->
+      <!--asteroid ref="env_ast_ore_m_02_macro" densityfactor="0.75" rotation="360" rotationvariation="4" noisescale="4000" seed="26041984" minnoisevalue="0.2" maxnoisevalue="1" /-->
+      <!--asteroid groupref="asteroid_highyield_v1" lodrule="asteroidxl" densityfactor="0.05" rotation="36" rotationvariation="4" noisescale="24000" seed="26041984" minnoisevalue="0.7" maxnoisevalue="1" yieldvariation="0" /-->
+      <asteroid groupref="asteroid_highyield_v1" lodrule="asteroidxl" densityfactor="0.15" rotation="36" rotationvariation="4" noisescale="24000" seed="26041984" minnoisevalue="0.7" maxnoisevalue="1" />
+      <asteroid groupref="asteroid_ore_l" densityfactor="1.5" rotation="360" rotationvariation="4" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" yieldvariation="0" />
+      <asteroid groupref="asteroid_ore_m" densityfactor="3.5" rotation="360" rotationvariation="8" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" yieldvariation="0" />
+      <!--asteroid groupref="asteroid_highyield_sil_v1" lodrule="asteroidxl" densityfactor="0.15" rotation="36" rotationvariation="4" noisescale="24000" seed="26041984" minnoisevalue="0.7" maxnoisevalue="1" /-->
+      <!--asteroid groupref="asteroid_silicon_l" densityfactor="1.5" rotation="360" rotationvariation="4" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" /-->
+      <!--asteroid groupref="asteroid_silicon_m" densityfactor="3.5" rotation="360" rotationvariation="8" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" /-->
+      <!--asteroid groupref="asteroid_nividium_l" densityfactor="1.5" rotation="360" rotationvariation="4" noisescale="1500" seed="2001" minnoisevalue="0.8" maxnoisevalue="1" /-->
+      <!--asteroid groupref="asteroid_nividium_m" densityfactor="2.25" rotation="360" rotationvariation="8" noisescale="1500" seed="2001" minnoisevalue="0.6" maxnoisevalue="1" /-->
+      <asteroid groupref="asteroid_ice_l" densityfactor="1" rotation="0" rotationvariation="8" noisescale="5000" seed="2001" minnoisevalue="0.75" maxnoisevalue="1" />
+      <asteroid groupref="asteroid_ice_m" densityfactor="2" rotation="0" rotationvariation="16" noisescale="5000" seed="2001" minnoisevalue="0.75" maxnoisevalue="1" />
+    </fields>
+    <resources>
+      <!--resource ware="methane" yield="high" /-->
+      <!--resource ware="helium" yield="high" /-->
+      <resource ware="hydrogen" yield="high" />
+      <resource ware="ore" yield="high" />
+      <!--resource ware="silicon" yield="high" /-->
+      <resource ware="ice" yield="medium" />
+      <!--resource ware="nividium" yield="high" /-->
+    </resources>
+  </region>
+
+  <region name="region_mod_farnham_legend_sector002_scrap_field" density="1.5" rotation="0" noisescale="1000" seed="32" minnoisevalue="0.15" maxnoisevalue="1">
+    <boundary class="splinetube">
+      <size r="5000" />
+      <splineposition x="-38258.6" y="8250.0" z="60957.1" tx="-0.2803" ty="-0.220113" tz="-0.934335" inlength="0.0" outlength="10387.7" />
+      <splineposition x="-32623.2" y="2156.25" z="34658.2" tx="0.643088" ty="-0.170163" tz="-0.746647" inlength="10434.9" outlength="10434.9" />
+      <splineposition x="1753.27" y="-2406.25" z="13994.8" tx="0.363918" ty="-0.016433" tz="-0.931286" inlength="8547.64" outlength="8547.64" />
+      <splineposition x="-13838.2" y="1281.25" z="-13055.5" tx="0.428328" ty="0.0408265" tz="-0.902701" inlength="9866.61" outlength="9866.61" />
+      <splineposition x="27300.8" y="0.0" z="-39354.4" tx="0.844128" ty="0.0482247" tz="-0.533968" inlength="13739.6" outlength="13739.6" />
+      <splineposition x="55666.0" y="5328.13" z="-57200.1" tx="0.806279" ty="0.316696" tz="-0.499617" inlength="9086.34" outlength="0.0" />
+    </boundary>
+    <falloff>
+      <lateral>
+        <step position="0.0" value="0.50" />
+        <step position="0.2" value="1.0" />
+        <step position="0.5" value="1.0" />
+        <step position="0.6" value="1.6" />
+        <step position="0.8" value="1.3" />
+        <step position="0.95" value="1.10" />
+        <step position="1.0" value="0.20" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="0.0" />
+        <step position="0.51" value="1.0" />
+        <step position="0.75" value="1.85" />
+        <step position="1.0" value="0.0" />
+      </radial>
+    </falloff>
+    <fields>
+      <damagefield affectsnavigation="false">
+        <damage shield="1" />
+        <!--speedcurve>
+          <step position="0.0" value="0.0"/-->
+        <!--m/s-->
+        <!--step position="100.0" value="1.0"/>
+        </speedcurve-->
+        <effects shield="dmgfx_cockpit_electrostatic_01" mindelay="1.0" maxdelay="3.0" />
+      </damagefield>
+
+      <!--Lockboxes-->
+      <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1" />
+      <!--Lockboxes end-->
+
+      <debris groupref="debris_xenon_xl" densityfactor="1.4" rotation="360" rotationvariation="4" noisescale="10000" seed="32" minnoisevalue="0.60" maxnoisevalue="1" distancefactor="1.0" />
+      <debris groupref="debris_xenon_l" densityfactor="0.30" rotation="360" rotationvariation="1" noisescale="10000" seed="32" minnoisevalue="0.540" maxnoisevalue="1" />
+      <debris groupref="debris_paranid_xl" densityfactor="0.9" rotation="360" rotationvariation="1" noisescale="10000" seed="32" minnoisevalue="0.540" maxnoisevalue="1" />
+      <debris groupref="debris_teladi_xl" densityfactor="0.9" rotation="360" rotationvariation="1" noisescale="10000" seed="32" minnoisevalue="0.540" maxnoisevalue="1" />
+    </fields>
+    <resources>
+      <resource ware="rawscrap" yield="high" />
+    </resources>
+  </region>
+
+  <region name="region_mod_farnham_legend_sector003_scrap_field_01" density="1.5" rotation="0" noisescale="1000" seed="32" minnoisevalue="0.15" maxnoisevalue="1">
+    <boundary class="splinetube">
+      <size r="5000" />
+      <splineposition x="-38258.6" y="8250.0" z="60957.1" tx="-0.2803" ty="-0.220113" tz="-0.934335" inlength="0.0" outlength="10387.7" />
+      <splineposition x="-32623.2" y="2156.25" z="34658.2" tx="0.643088" ty="-0.170163" tz="-0.746647" inlength="10434.9" outlength="10434.9" />
+      <splineposition x="1753.27" y="-2406.25" z="13994.8" tx="0.363918" ty="-0.016433" tz="-0.931286" inlength="8547.64" outlength="8547.64" />
+      <splineposition x="-13838.2" y="1281.25" z="-13055.5" tx="0.428328" ty="0.0408265" tz="-0.902701" inlength="9866.61" outlength="9866.61" />
+      <splineposition x="27300.8" y="0.0" z="-39354.4" tx="0.844128" ty="0.0482247" tz="-0.533968" inlength="13739.6" outlength="13739.6" />
+      <splineposition x="55666.0" y="5328.13" z="-57200.1" tx="0.806279" ty="0.316696" tz="-0.499617" inlength="9086.34" outlength="0.0" />
+    </boundary>
+    <falloff>
+      <lateral>
+        <step position="0.0" value="0.50" />
+        <step position="0.2" value="1.0" />
+        <step position="0.5" value="1.0" />
+        <step position="0.6" value="1.6" />
+        <step position="0.8" value="1.3" />
+        <step position="0.95" value="1.10" />
+        <step position="1.0" value="0.20" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="0.0" />
+        <step position="0.51" value="1.0" />
+        <step position="0.75" value="1.85" />
+        <step position="1.0" value="0.0" />
+      </radial>
+    </falloff>
+    <fields>
+      <damagefield affectsnavigation="false">
+        <damage shield="1" />
+        <!--speedcurve>
+          <step position="0.0" value="0.0"/-->
+        <!--m/s-->
+        <!--step position="100.0" value="1.0"/>
+        </speedcurve-->
+        <effects shield="dmgfx_cockpit_electrostatic_01" mindelay="1.0" maxdelay="3.0" />
+      </damagefield>
+
+      <!--Lockboxes-->
+      <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1" />
+      <!--Lockboxes end-->
+
+      <debris groupref="debris_xenon_xl" densityfactor="1.4" rotation="360" rotationvariation="4" noisescale="10000" seed="32" minnoisevalue="0.60" maxnoisevalue="1" distancefactor="1.0" />
+      <debris groupref="debris_xenon_l" densityfactor="0.30" rotation="360" rotationvariation="1" noisescale="10000" seed="32" minnoisevalue="0.540" maxnoisevalue="1" />
+      <debris groupref="debris_paranid_xl" densityfactor="0.9" rotation="360" rotationvariation="1" noisescale="10000" seed="32" minnoisevalue="0.540" maxnoisevalue="1" />
+      <debris groupref="debris_teladi_xl" densityfactor="0.9" rotation="360" rotationvariation="1" noisescale="10000" seed="32" minnoisevalue="0.540" maxnoisevalue="1" />
+    </fields>
+    <resources>
+      <resource ware="rawscrap" yield="high" />
+    </resources>
+  </region>
+
+  <region name="region_mod_farnham_legend_sector003_scrap_field_02" density="1.5" rotation="0" noisescale="1000" seed="32" minnoisevalue="0.15" maxnoisevalue="1">
+    <boundary class="splinetube">
+      <size r="5000" />
+      <splineposition x="-38258.6" y="8250.0" z="60957.1" tx="-0.2803" ty="-0.220113" tz="-0.934335" inlength="0.0" outlength="10387.7" />
+      <splineposition x="-32623.2" y="2156.25" z="34658.2" tx="0.643088" ty="-0.170163" tz="-0.746647" inlength="10434.9" outlength="10434.9" />
+      <splineposition x="1753.27" y="-2406.25" z="13994.8" tx="0.363918" ty="-0.016433" tz="-0.931286" inlength="8547.64" outlength="8547.64" />
+      <splineposition x="-13838.2" y="1281.25" z="-13055.5" tx="0.428328" ty="0.0408265" tz="-0.902701" inlength="9866.61" outlength="9866.61" />
+      <splineposition x="27300.8" y="0.0" z="-39354.4" tx="0.844128" ty="0.0482247" tz="-0.533968" inlength="13739.6" outlength="13739.6" />
+      <splineposition x="55666.0" y="5328.13" z="-57200.1" tx="0.806279" ty="0.316696" tz="-0.499617" inlength="9086.34" outlength="0.0" />
+    </boundary>
+    <falloff>
+      <lateral>
+        <step position="0.0" value="0.50" />
+        <step position="0.2" value="1.0" />
+        <step position="0.5" value="1.0" />
+        <step position="0.6" value="1.6" />
+        <step position="0.8" value="1.3" />
+        <step position="0.95" value="1.10" />
+        <step position="1.0" value="0.20" />
+      </lateral>
+      <radial>
+        <step position="0.0" value="0.0" />
+        <step position="0.51" value="1.0" />
+        <step position="0.75" value="1.85" />
+        <step position="1.0" value="0.0" />
+      </radial>
+    </falloff>
+    <fields>
+      <damagefield affectsnavigation="false">
+        <damage shield="1" />
+        <!--speedcurve>
+          <step position="0.0" value="0.0"/-->
+        <!--m/s-->
+        <!--step position="100.0" value="1.0"/>
+        </speedcurve-->
+        <effects shield="dmgfx_cockpit_electrostatic_01" mindelay="1.0" maxdelay="3.0" />
+      </damagefield>
+
+      <!--Lockboxes-->
+      <object groupref="lockboxes_extra" densityfactor="0.00005" rotation="0" rotationvariation="70" minnoisevalue="0.1" maxnoisevalue="1" />
+      <!--Lockboxes end-->
+
+      <debris groupref="debris_xenon_xl" densityfactor="1.4" rotation="360" rotationvariation="4" noisescale="10000" seed="32" minnoisevalue="0.60" maxnoisevalue="1" distancefactor="1.0" />
+      <debris groupref="debris_xenon_l" densityfactor="0.30" rotation="360" rotationvariation="1" noisescale="10000" seed="32" minnoisevalue="0.540" maxnoisevalue="1" />
+      <debris groupref="debris_paranid_xl" densityfactor="0.9" rotation="360" rotationvariation="1" noisescale="10000" seed="32" minnoisevalue="0.540" maxnoisevalue="1" />
+      <debris groupref="debris_teladi_xl" densityfactor="0.9" rotation="360" rotationvariation="1" noisescale="10000" seed="32" minnoisevalue="0.540" maxnoisevalue="1" />
+    </fields>
+    <resources>
+      <resource ware="rawscrap" yield="high" />
+    </resources>
+  </region>
+
+</regions>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<diff>
+	<replace sel="//components/component/layers/layer/lights/omni[@r='173' and @name='XU Omni01']/@r">44</replace>
+	<replace sel="//components/component/layers/layer/lights/omni[@g='194' and @name='XU Omni01']/@g">202</replace>
+	<replace sel="//components/component/layers/layer/lights/omni[@b='125' and @name='XU Omni01']/@b">51</replace>
+	<replace sel="//components/component/layers/layer/lights/omni[@range='40']/@range">1000</replace>
+	<replace sel="//components/component/layers/layer/lights/omni[@intensity='0.5']/@intensity">8</replace>
+</diff>

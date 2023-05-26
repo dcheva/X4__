@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="Setup_Mod_FarnhamLegend" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+  <cues>
+    <cue name="X4ep1_Prelude_Setup" namespace="this">
+      <conditions>
+        <event_universe_generated/>
+        <check_value value="player.galaxy.macro == macro.xu_ep2_universe_macro" comment="only in main-galaxy"/>
+      </conditions>
+      <!--actions>
+        <! find list of gates from Terran DLC into base-game>
+        <find_sector name="$PirateSectors" extension="'mod_sector_farnham_legend'" multiple="true"/>
+        <find_sector name="$BaseSectors" extension="''" multiple="true"/>
+        <find_sector name="$SectorS3" macro="macro.cluster_504_sector001_macro" comment="S3" required="true"/>
+      </actions-->
+      <cues>
+        <!-- Create Alliance Wharf -->
+        <cue name="ALIWharf_Mod_FarnhamLegend" namespace="this">
+          <actions>
+            <set_value name="$DebugChance" exact="0"/>
+            <find_sector name="$ALIWharfSector" macro="macro.Cluster_Mod_FarnhamLegend_01_Sector001_macro" required="true" />
+            <create_station rawname="'{20102,6201}'" name="$ALIWharf" sector="$ALIWharfSector" macro="macro.station_gen_factory_base_01_macro" method="closedloop" constructionplan="'par_wharf'" owner="faction.alliance" state="componentstate.operational">
+              <position x="70km" y="0km" z="-90km" max="0km"/>
+              <rotation yaw="140.0deg" pitch="0.0deg" roll="0.0deg"/>
+              <safepos includeplotbox="1"/>
+            </create_station>
+          </actions>
+          <cues>
+            <cue name="ALIWharf_Mod_FarnhamLegend_Setup">
+              <actions>
+                <signal_objects object="player.galaxy" param="'init station'" param2="$ALIWharf" param3="true"/>
+              </actions>
+            </cue>
+            <!-- DEBUG -->
+            <cue name="ALIWharf_Mod_FarnhamLegend_DEBUG">
+              <conditions>
+                <event_cue_signalled/>
+              </conditions>
+              <actions>
+                <destroy_object object="$ALIWharf" explosion="false"/>
+              </actions>
+            </cue>
+            <!-- Station Rebuilding -->
+            <cue name="ALIWharf_Mod_FarnhamLegend_Rebuild">
+              <conditions>
+                <event_object_destroyed object="$ALIWharf"/>
+              </conditions>
+              <delay min="30min" max="90min" profile="bell"/>
+              <actions>
+                <do_any>
+                  <find_sector name="$ALIWharfSector" macro="macro.Cluster_Mod_FarnhamLegend_01_Sector001_macro" weight="80"/>
+                  <find_sector name="$ALIWharfSector" macro="macro.Cluster_Mod_FarnhamLegend_01_Sector002_macro" weight="10"/>
+                  <find_sector name="$ALIWharfSector" macro="macro.Cluster_Mod_FarnhamLegend_01_Sector003_macro" weight="10"/>
+                </do_any>
+                <create_station rawname="'{20102,6201}'" name="$ALIWharf" sector="$ALIWharfSector" macro="macro.station_gen_factory_base_01_macro" method="closedloop" owner="faction.alliance" state="componentstate.operational">
+                  <position x="0km" y="0km" z="0km" max="100km"/>
+                  <rotation yaw="140.0deg" pitch="0.0deg" roll="0.0deg"/>
+                  <safepos includeplotbox="1"/>
+                </create_station>
+                <add_build_to_expand_station object="$ALIWharf.buildstorage" buildobject="$ALIWharf" constructionplan="'par_wharf'"/>
+                <debug_text text="'Wharf rebuild started in Sector $ALIWharfSector.name'" chance="$DebugChance"/>
+                <reset_cue cue="ALIWharf_Mod_FarnhamLegend_FabBay"/>
+                <reset_cue cue="ALIWharf_Mod_FarnhamLegend_Rebuild"/>
+              </actions>
+            </cue>
+            <!-- Readjusting Ship lists -->
+            <cue name="ALIWharf_Mod_FarnhamLegend_FabBay">
+              <conditions>
+                <event_build_finished_components object="$ALIWharf.buildingmodule"/>
+                <count_object_components object="$ALIWharf" class="[class.buildmodule]" min="1"/>
+              </conditions>
+              <actions>
+                <set_ship_wares_absolute object="$ALIWharf" wares="$Shiplist"/>
+                <set_equipment_wares_absolute object="$ALIWharf" wares="$Equipmentlist"/>
+              </actions>
+            </cue>
+          </cues>
+        </cue>
+        <!-- Create Hatikvah Free Port -->
+        <cue name="HATPort_Mod_FarnhamLegend" namespace="this">
+          <actions>
+            <set_value name="$DebugChance" exact="0"/>
+            <find_sector name="$HATPortSector" macro="macro.Cluster_Mod_FarnhamLegend_01_Sector002_macro" required="true" />
+            <create_station rawname="'{20102,1511}'" name="$HATPort" sector="$HATPortSector" macro="macro.station_gen_piratebase_base_01_macro" method="closedloop" constructionplan="'gen_freeport'" owner="faction.hatikvah" state="componentstate.operational">
+              <position x="145km" y="0km" z="-150km" max="0km"/>
+              <rotation yaw="140.0deg" pitch="0.0deg" roll="0.0deg"/>
+              <safepos includeplotbox="1"/>
+            </create_station>
+          </actions>
+          <cues>
+            <cue name="HATPort_Mod_FarnhamLegend_Setup">
+              <actions>
+                <signal_objects object="player.galaxy" param="'init station'" param2="$HATPort" param3="true"/>
+              </actions>
+            </cue>
+            <!-- DEBUG -->
+            <cue name="HATPort_Mod_FarnhamLegend_DEBUG">
+              <conditions>
+                <event_cue_signalled/>
+              </conditions>
+              <actions>
+                <destroy_object object="$HATPort" explosion="false"/>
+              </actions>
+            </cue>
+            <!-- Station Rebuilding -->
+            <cue name="HATPort_Mod_FarnhamLegend_Rebuild">
+              <conditions>
+                <event_object_destroyed object="$HATPort"/>
+              </conditions>
+              <delay min="30min" max="90min" profile="bell"/>
+              <actions>
+                <do_any>
+                  <find_sector name="$HATPortSector" macro="macro.Cluster_Mod_FarnhamLegend_01_Sector001_macro" weight="10"/>
+                  <find_sector name="$HATPortSector" macro="macro.Cluster_Mod_FarnhamLegend_01_Sector002_macro" weight="80"/>
+                  <find_sector name="$HATPortSector" macro="macro.Cluster_Mod_FarnhamLegend_01_Sector003_macro" weight="10"/>
+                </do_any>
+                <create_station rawname="'{20102,1511}'" name="$HATPort" sector="$HATPortSector" macro="macro.station_gen_piratebase_base_01_macro" method="closedloop" owner="faction.hatikvah" state="componentstate.operational">
+                  <position x="0km" y="0km" z="0km" max="100km"/>
+                  <rotation yaw="140.0deg" pitch="0.0deg" roll="0.0deg"/>
+                  <safepos includeplotbox="1"/>
+                </create_station>
+                <add_build_to_expand_station object="$HATPort.buildstorage" buildobject="$HATPort" constructionplan="'gen_freeport'"/>
+                <debug_text text="'Free port rebuild started in Sector $HATPortSector.name'" chance="$DebugChance"/>
+                <reset_cue cue="HATPort_Mod_FarnhamLegend_FabBay"/>
+                <reset_cue cue="HATPort_Mod_FarnhamLegend_Rebuild"/>
+              </actions>
+            </cue>
+          </cues>
+        </cue>
+        <!-- Create Scale Plate Pirate Base -->
+        <cue name="SCABase_Mod_FarnhamLegend" namespace="this">
+          <actions>
+            <set_value name="$DebugChance" exact="0"/>
+            <find_sector name="$SCABaseSector" macro="macro.Cluster_Mod_FarnhamLegend_01_Sector003_macro" required="true" />
+            <create_station rawname="'{20102,1501}'" name="$SCABase" sector="$SCABaseSector" macro="macro.station_gen_piratebase_base_01_macro" method="closedloop" constructionplan="'gen_piratebase'" owner="faction.scaleplate" state="componentstate.operational">
+            <!--create_station rawname="'{20102,1501}'" name="$SCABase" sector="$SCABaseSector" macro="macro.station_gen_piratebase_base_01_macro" method="closedloop" constructionplan="'gen_piratedock'" owner="faction.scaleplate" state="componentstate.operational"-->
+              <position x="250km" y="0km" z="75km" max="0km"/>
+              <rotation yaw="140.0deg" pitch="0.0deg" roll="0.0deg"/>
+              <safepos includeplotbox="1"/>
+            </create_station>
+          </actions>
+          <cues>
+            <cue name="SCABase_Mod_FarnhamLegend_Setup">
+              <actions>
+                <signal_objects object="player.galaxy" param="'init station'" param2="$SCABase" param3="true"/>
+              </actions>
+            </cue>
+            <!-- DEBUG -->
+            <cue name="SCABase_Mod_FarnhamLegend_DEBUG">
+              <conditions>
+                <event_cue_signalled/>
+              </conditions>
+              <actions>
+                <destroy_object object="$SCABase" explosion="false"/>
+              </actions>
+            </cue>
+            <!-- Station Rebuilding -->
+            <cue name="SCABase_Mod_FarnhamLegend_Rebuild">
+              <conditions>
+                <event_object_destroyed object="$SCABase"/>
+              </conditions>
+              <delay min="30min" max="90min" profile="bell"/>
+              <actions>
+                <do_any>
+                  <find_sector name="$SCABaseSector" macro="macro.Cluster_Mod_FarnhamLegend_01_Sector001_macro" weight="10"/>
+                  <find_sector name="$SCABaseSector" macro="macro.Cluster_Mod_FarnhamLegend_01_Sector002_macro" weight="10"/>
+                  <find_sector name="$SCABaseSector" macro="macro.Cluster_Mod_FarnhamLegend_01_Sector003_macro" weight="80"/>
+                </do_any>
+                <create_station rawname="'{20102,1501}'" name="$SCABase" sector="$SCABaseSector" macro="macro.station_gen_piratebase_base_01_macro" method="closedloop" owner="faction.scaleplate" state="componentstate.operational">
+                  <position x="0km" y="0km" z="0km" max="100km"/>
+                  <rotation yaw="140.0deg" pitch="0.0deg" roll="0.0deg"/>
+                  <safepos includeplotbox="1"/>
+                </create_station>
+                <add_build_to_expand_station object="$SCABase.buildstorage" buildobject="$SCABase" constructionplan="'gen_piratebase'"/>
+                <!--add_build_to_expand_station object="$SCABase.buildstorage" buildobject="$SCABase" constructionplan="'gen_piratedock'"/-->
+                <debug_text text="'Pirate base rebuild started in Sector $SCABaseSector.name'" chance="$DebugChance"/>
+                <reset_cue cue="SCABase_Mod_FarnhamLegend_FabBay"/>
+                <reset_cue cue="SCABase_Mod_FarnhamLegend_Rebuild"/>
+              </actions>
+            </cue>
+          </cues>
+        </cue>
+      </cues>
+    </cue>
+  </cues>
+</mdscript>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+	<replace sel="/macros/macro[@name='razorbill_macro']/properties/identification">  
+      <identification name="{20101,22301}" basename="{20101,22301}" description="{6920217,2}" icon="ship_l_cruiser_01" />
+	</replace>
+</diff>

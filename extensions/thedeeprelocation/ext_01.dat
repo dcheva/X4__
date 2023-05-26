@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content id="ws_2976257404" name="Sector: The Deep - Relocation Patch" description="Relocates The Deep and The Shallows sectors one spot south for compatibility with some other sector mods." author="Chillmatica" version="100" date="2023-05-15" save="1" enabled="1" sync="false" lastupdate="1684168323">
+  <dependency id="ws_2975648845" version="100" optional="false" name="Sector: The Deep"/>
+</content>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Move both sectors south one spot for mod compatibility -->
+<diff>
+  <replace sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='thedeep_cluster_thedeepc001_connection']/offset">
+    <offset>
+		<position x="-105000000" y="0" z="25990000" />
+	</offset>
+  </replace>
+  <replace sel="/macros/macro[@name='XU_EP2_universe_macro']/connections/connection[@name='thedeep_cluster_theshallowsc001_connection']/offset">
+    <offset>
+		<position x="-120000000" y="0" z="17320000"/>
+	</offset>
+  </replace>
+</diff>

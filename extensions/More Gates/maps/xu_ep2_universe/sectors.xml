@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+	<!-- 4 Cardnial's Redress x Segaris -->
+	<add sel="//macros/macro[@name='Cluster_36_Sector001_macro']/connections">
+		<connection name="zones_iHaku_Cluster_36_Sector001_connection" ref="zones">
+			<offset>
+				<position x="-80000" y="0" z="-70000" />
+			</offset>
+			<macro ref="zones_iHaku_Cluster_36_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>
+
+	<!-- 5 Hewas Twin V x Ianamus Zura IV -->
+	<add sel="//macros/macro[@name='Cluster_43_Sector001_macro']/connections">
+		<connection name="zones_iHaku_Cluster_43_Sector001_connection" ref="zones">
+			<offset>
+				<position x="150000" y="0" z="-60000" />
+			</offset>
+			<macro ref="zones_iHaku_Cluster_43_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>
+	
+	<!-- 5 Ianamus Zura IV x Hewas Twin -->
+	<add sel="//macros/macro[@name='Cluster_15_Sector001_macro']/connections">
+		<connection name="zones_iHaku_Cluster_15_Sector001_connection" ref="zones">
+			<offset>
+				<position x="-30000" y="0" z="-100000" />
+			</offset>
+			<macro ref="zones_iHaku_Cluster_15_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>
+
+	<!-- 7 Getsu Fune x Barren Shores -->
+	<add sel="//macros/macro[@name='Cluster_48_Sector001_macro']/connections">
+		<connection name="zones_iHaku_Cluster_48_Sector001_connection" ref="zones">
+			<offset>
+				<position x="-70000" y="0" z="150000" />
+			</offset>
+			<macro ref="zones_iHaku_Cluster_48_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>
+	
+	<!-- 8 Company Regard x Tarka's Ravine XVI -->
+	<add sel="//macros/macro[@name='Cluster_20_Sector001_macro']/connections">
+		<connection name="zones_iHaku_Cluster_20_Sector001_connection" ref="zones">
+			<offset>
+				<position x="140000" y="0" z="120000" />
+			</offset>
+			<macro ref="zones_iHaku_Cluster_20_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>
+	
+	<!-- 10 Atiya's Misfortune III x Oort Cloud -->
+	<add sel="//macros/macro[@name='Cluster_26_Sector002_macro']/connections">
+		<connection name="zones_iHaku_Cluster_26_Sector002_connection" ref="zones">
+			<offset>
+				<position x="-80000" y="0" z="-110000" />
+			</offset>
+			<macro ref="zones_iHaku_Cluster_26_Sector002_macro" connection="sector"/>
+		</connection>
+	</add>
+
+	<!-- 11 Sacred Relic x Turquoise Sea X -->
+	<add sel="//macros/macro[@name='Cluster_23_Sector001_macro']/connections">
+		<connection name="zones_iHaku_Cluster_23_Sector001_connection" ref="zones">
+			<offset>
+				<position x="120000" y="0" z="0" />
+			</offset>
+			<macro ref="zones_iHaku_Cluster_23_Sector001_macro" connection="sector"/>
+		</connection>
+	</add>
+
+	<!-- 11 Turquoise Sea X x Sacred Relic -->
+	<add sel="//macros/macro[@name='Cluster_50_Sector002_macro']/connections">
+		<connection name="zones_iHaku_Cluster_50_Sector002_connection" ref="zones">
+			<offset>
+				<position x="0" y="0" z="-160000" />
+			</offset>
+			<macro ref="zones_iHaku_Cluster_50_Sector002_macro" connection="sector"/>
+		</connection>
+	</add>
+</diff>
+

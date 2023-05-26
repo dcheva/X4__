@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaults xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="libraries.xsd">
+
+  <!--Ralston-->
+  <dataset macro="homebrew_cluster08_macro">
+    <properties>
+      <identification name="{20005,1059}" description="{79797981,1013}" />
+      <sounds>
+        <music ref="music_soundtrack_argon" />
+      </sounds>
+      <area sunlight="1" economy="0.5" security="0.5" />
+      <system>
+        <space environment="{1042,12021}(Thin Nebula)"/>
+        <suns>
+          <sun class="{1042,13121}(Blue Giant)" />
+        </suns>
+        <planets>
+          <planet name="{20005,1059}(Ralston)" class="{1042,14031}(Terrestrial)" geology="{1042,15141}(Ocean)" atmosphere="{1042,11071}(Nitrogen/Oxygen)" population="{1042,10021}" maxpopulation="7160250000" settlements="{1042,16051}(Densely Populated)" part="planet001c">
+          </planet>
+        </planets>
+      </system>
+    </properties>
+  </dataset>
+  <dataset macro="homebrew_cluster08_sector001_macro">
+    <properties>
+      <identification name="{20005,1059}" description="{79797981,1013}" />
+      <worlds>
+        <world part="planet001c"/>
+      </worlds>
+    </properties>
+  </dataset>
+
+</defaults>

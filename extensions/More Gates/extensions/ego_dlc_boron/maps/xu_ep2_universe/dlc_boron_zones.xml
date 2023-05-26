@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+
+<!-- 1 Atreus Clouds x Great Reef -->
+	<add sel="//macros">
+		<macro name="zones_iHaku_Cluster_608_Sector001_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate608To603" ref="gates">
+					<offset>
+						<position x="1" y="1" z="1"/>
+						<rotation yaw="270" />
+					</offset>
+					<macro ref="props_gates_anc_gate_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+	</add>
+	
+	<!-- 1 Great Reef x Atreus Clouds -->
+	<add sel="//macros">
+		<macro name="zones_iHaku_Cluster_603_Sector001_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate603To608" ref="gates">
+					<offset>
+						<position x="1" y="1" z="1"/>
+						<rotation yaw="105" />
+					</offset>
+					<macro ref="props_gates_anc_gate_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+	</add>
+	
+	<!-- 2 Sanctuary of Darkness x Emperor's Pride IV -->
+	<add sel="//macros">
+		<macro name="zones_iHaku_Cluster_605_Sector001_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate605To423" ref="gates">
+					<offset>
+						<position x="1" y="1" z="1"/>
+						<rotation yaw="270" />
+					</offset>
+					<macro ref="props_gates_anc_gate_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+	</add>
+	
+	<!-- 3 Menelaus Oasis x Mercury -->
+	<add sel="//macros">
+		<macro name="zones_iHaku_Cluster_609_Sector001_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate609To106" ref="gates">
+					<offset>
+						<position x="1" y="1" z="1"/>
+						<rotation yaw="359" />
+					</offset>
+					<macro ref="props_gates_anc_gate_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+	</add>
+
+	<!-- 6 Ocean of Fantasy x Asteroid Belt -->
+	<add sel="//macros">
+		<macro name="zones_iHaku_Cluster_604_Sector001_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate604To100" ref="gates">
+					<offset>
+						<position x="1" y="1" z="1"/>
+						<rotation yaw="1" />
+					</offset>
+					<macro ref="props_gates_anc_gate_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+	</add>
+	
+	<!-- 7 Barren Shores x Getsu Fune -->
+	<add sel="//macros">
+		<macro name="zones_iHaku_Cluster_602_Sector001_macro" class="zone">
+			<component ref="standardzone"/>
+			<connections>
+				<connection name="connection_ClusterGate602To48" ref="gates">
+					<offset>
+						<position x="1" y="1" z="1"/>
+						<rotation yaw="300" />
+					</offset>
+					<macro ref="props_gates_anc_gate_macro" connection="space"/>
+				</connection>
+			</connections>
+		</macro>
+	</add>
+</diff>
