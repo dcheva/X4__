@@ -25,9 +25,9 @@
     <param name="allow_mouse_vr_pointer" value="true"/>
     <param name="sensitivity_vr_mouse_yaw" value="0.50"/>
     <param name="sensitivity_vr_mouse_pitch" value="0.50"/>
-    <param name="deadzone" value="5"/>
+    <param name="deadzone" value="0"/>
     <param name="stick_steering_adaptive" value="false"/>
-    <param name="mouse_steering_adaptive" value="false"/>
+    <param name="mouse_steering_adaptive" value="true"/>
     <param name="yaw_into_roll" value="0"/>
   </config>
   <!-- input actions -->

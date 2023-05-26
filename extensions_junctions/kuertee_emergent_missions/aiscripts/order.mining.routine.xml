@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<diff>
+	<!-- this trader order actually makes the ship sell its wares -->
+	<!-- i.e. from the aiscript: "... For the buyoffer (I sell) ..." -->
+	<!-- and several trade orders can be created -->
+	<!--
+		add:
+		<attention min="unknown">
+			<actions>
+				<create_trade_order name="$tradeorder" object="this.object" tradeoffer="$buyoffer" amount="$amount" internal="not $blacklist_overridesell?" immediate="true"/>
+	-->
+	<add pos="after" sel="//create_trade_order">
+		<do_if value="@this.ship">
+			<do_if value="not this.ship.isplayerowned">
+				<do_if value="not @this.$kEMissions_mission_isSet">
+					<do_if value="this.ship.sector == player.sector">
+						<set_value name="this.$kEMissions_mission_isSet" exact="true" />
+						<signal_objects object="player.galaxy" param="'kEMissions_create_escort_offer'" param2="table[$ship = this.ship, $tradeOffer = $buyoffer]" />
+					</do_if>
+				</do_if>
+			</do_if>
+		</do_if>
+	</add>
+</diff>

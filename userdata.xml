@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
   <known_lockbox_rare>1</known_lockbox_rare>
-  <known_sector>15</known_sector>
+  <known_sector>18</known_sector>
   <relation_ceremony_10>1</relation_ceremony_10>
   <relation_ceremony_20>1</relation_ceremony_20>
   <people_crew_count>15</people_crew_count>
@@ -13,4 +13,5 @@
   <unlock_x4gamestart_scientist>1</unlock_x4gamestart_scientist>
   <story_hq_signal_leak>1</story_hq_signal_leak>
   <x4ke_sod_discovered>1</x4ke_sod_discovered>
+  <known_sector_xenon>1</known_sector_xenon>
 </root>

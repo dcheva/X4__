@@ -55,7 +55,7 @@
   <mouseovertext>true</mouseovertext>
   <cockpitcamerascale>1.00</cockpitcamerascale>
   <!-- input options -->
-  <confinemouse>false</confinemouse>
+  <confinemouse>true</confinemouse>
   <gamepadmode>2</gamepadmode>
   <tobiimode>combined</tobiimode>
   <tobiianglefactor>1.00</tobiianglefactor>

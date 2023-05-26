@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<diff>
+	<!--
+		add:
+		<do_if value="$performsell">
+			<create_trade_order name="$sellorder" object="this.object" tradeoffer="$buyoffer" amount="$sellamount" immediate="true" internal="not $blacklist_overridesell?"/>
+	-->
+	<add pos="after" sel="//do_if[@value=&quot;$performsell&quot;]/create_trade_order">
+		<!-- <signal_cue_instantly cue="md.kuertee_emergent_missions.Missions_Escorts_CreateOffer" param="table[$ship = this.ship]" /> -->
+		<!-- <debug_text text="'kuertee_emergent_missions order.trade.routine create_trade_order'" chance="md.kuertee_emergent_missions.UserSettings.$debugChance" /> -->
+		<do_if value="@this.ship">
+			<do_if value="not this.ship.isplayerowned">
+				<do_if value="not @this.$kEMissions_mission_isSet">
+					<do_if value="this.ship.sector == player.sector">
+						<set_value name="this.$kEMissions_mission_isSet" exact="true" />
+						<signal_objects object="player.galaxy" param="'kEMissions_create_escort_offer'" param2="table[$ship = this.ship, $tradeOffer = $buyoffer]" />
+					</do_if>
+				</do_if>
+			</do_if>
+		</do_if>
+	</add>
+	<!--
+		add:
+		<do_if value="$performbuy">
+			< name="$buyorder" object="this.object" tradeoffer="$selloffer" amount="$buyamount" immediate="true" internal="not $blacklist_overridebuy?"/>
+	-->
+	<add pos="after" sel="//do_if[@value=&quot;$performbuy&quot;]/create_trade_order">
+		<!-- <signal_cue_instantly cue="md.kuertee_emergent_missions.Missions_Escorts_CreateOffer" param="table[$ship = this.ship]" /> -->
+		<!-- <debug_text text="'kuertee_emergent_missions order.trade.routine create_trade_order'" chance="md.kuertee_emergent_missions.UserSettings.$debugChance" /> -->
+		<do_if value="@this.ship">
+			<do_if value="not this.ship.isplayerowned">
+				<do_if value="not @this.$kEMissions_mission_isSet">
+					<do_if value="this.ship.sector == player.sector">
+						<set_value name="this.$kEMissions_mission_isSet" exact="true" />
+						<signal_objects object="player.galaxy" param="'kEMissions_create_escort_offer'" param2="table[$ship = this.ship, $tradeOffer = $selloffer]" />
+					</do_if>
+				</do_if>
+			</do_if>
+		</do_if>
+	</add>
+</diff>

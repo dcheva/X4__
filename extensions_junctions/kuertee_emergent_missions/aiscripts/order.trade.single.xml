@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<diff>
+	<!--
+		add:
+		<attention min="unknown">
+			<actions>
+				<create_trade_order object="this.object" tradeoffer="$tradeoffer" amount="$amount" unbundle="$unbundle" immediate="true" internal="$internalorder"/>
+	-->
+	<add pos="after" sel="//create_trade_order">
+		<!-- <signal_cue_instantly cue="md.kuertee_emergent_missions.Missions_Escorts_CreateOffer" param="table[$ship = this.ship]" /> -->
+		<!-- <debug_text text="'kuertee_emergent_missions order.trade.single create_trade_order'" chance="md.kuertee_emergent_missions.UserSettings.$debugChance" /> -->
+		<do_if value="@this.ship">
+			<do_if value="not this.ship.isplayerowned">
+				<do_if value="not @this.$kEMissions_mission_isSet">
+					<do_if value="this.ship.sector == player.sector">
+						<set_value name="this.$kEMissions_mission_isSet" exact="true" />
+						<signal_objects object="player.galaxy" param="'kEMissions_create_escort_offer'" param2="table[$ship = this.ship, $tradeOffer = $tradeoffer]" />
+					</do_if>
+				</do_if>
+			</do_if>
+		</do_if>
+	</add>
+</diff>

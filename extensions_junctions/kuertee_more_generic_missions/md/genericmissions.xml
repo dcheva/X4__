@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<diff>
+<!-- start: generate more missions -->
+	<!--
+		add
+		<cue name="OnSectorChange" instantiate="true">
+			<actions>
+	-->
+	<add pos="prepend" sel="//cue[@name=&quot;OnSectorChange&quot;]/actions">
+		<set_value name="Manager.$kuerteeDebugChance" exact="0"/>
+		<debug_text text="'kuertee_more_generic_missions'" chance="md.kuertee_mgm_config.Config.$debugChance" />
+	</add>
+	<!-- add before
+		<cue name="EvaluateSectorMissions" instantiate="true">
+			<do_if value="$SectorGMCount lt $SectorLimit">
+	-->
+	<add pos="before" sel="//cue[@name=&quot;EvaluateSectorMissions&quot;]//do_if[@value=&quot;$SectorGMCount lt $SectorLimit&quot;]">
+		<!--
+			end + (start - end) * (10 - hour) / 10
+			25 to 10
+			0: 10 + 15 * 10 / 10 = 25
+			1: 10 + 15 * 9 / 10 = 23.5
+			5: 10 + 15 * 5 / 10 = 17
+			9: 10 + 15 * 1 / 10 = 11
+			10: 10 + 15 * 0 / 10 = 10
+
+			10 to 10
+			0: 10 + 0 * 10 / 0 = 10
+
+			10 to 5
+			0: 5 + 5 * (10 - 0) / 10 = 10
+			1: 5 + 5 * (10 - 1) / 10 = 9
+			5: 5 + 5 * (10 - 5) / 10 = 7
+			9: 5 + 5 * (10 - 9) / 10 = 5
+			10: 5 + 5 * (10 - 10) / 10 = 5
+
+			10 to 25
+			0: 25 + (10 - 25) * (10 - 0) / 10 = 10
+			1: 25 + (10 - 25) * (10 - 1) / 10 = 11
+			5: 25 + (10 - 25) * (10 - 5) / 10 = 17.5
+			9: 25 + (10 - 25) * (10 - 9) / 10 = 23.5
+			10: 25 + (10 - 25) * (10 - 10) / 10 = 25
+		-->
+		<set_value name="$start" exact="md.kuertee_mgm_config.Config.$user_createCount_atZeroH" />
+		<set_value name="$end" exact="md.kuertee_mgm_config.Config.$user_createCount_atTenH" />
+		<set_value name="$gameHour" exact="player.age / 60 / 60" />
+		<debug_text text="'kuertee_more_generic_missions: $gameHour: ' + $gameHour" chance="md.kuertee_mgm_config.Config.$debugChance" />
+		<set_value name="$SectorLimit" exact="($end + ($start - $end) * (10 - $gameHour) / 10 + 0.5)i" />
+		<debug_text text="'kuertee_more_generic_missions: $start: ' + $start" chance="md.kuertee_mgm_config.Config.$debugChance" />
+		<debug_text text="'kuertee_more_generic_missions: $end: ' + $end" chance="md.kuertee_mgm_config.Config.$debugChance" />
+		<debug_text text="'kuertee_more_generic_missions: $SectorLimit: ' + $SectorLimit" chance="md.kuertee_mgm_config.Config.$debugChance" />
+		<!-- $end + ($start - $end) * (10 - 0) / 10 -->
+		<do_if value="
+			($start gt $end and $SectorLimit lt $end)
+			or
+			($start lt $end and $SectorLimit gt $end)
+		">
+			<set_value name="$SectorLimit" exact="$end" />
+			<debug_text text="'kuertee_more_generic_missions: $SectorLimit (limiter): ' + $SectorLimit" chance="md.kuertee_mgm_config.Config.$debugChance" />
+		</do_if>
+		<debug_text text="'kuertee_more_generic_missions: $SectorGMCount: ' + $SectorGMCount" chance="md.kuertee_mgm_config.Config.$debugChance" />
+	</add>
+	<!-- REPLACE
+		<cue name="EvaluateSectorMissions" instantiate="true">
+			...
+			<set_value name="$MissionCount" exact="([$Stations.count * 0.5, (if player.hasactivemission then 0 else 3) + $SectorLimit - $SectorGMCount].min)i"/>
+	-->
+	<replace sel="(//cue[@name=&quot;EvaluateSectorMissions&quot;]//set_value[@name=&quot;$MissionCount&quot;])[1]">
+		<!-- <set_value name="$MissionCount" exact="$SectorLimit - $SectorGMCount" /> -->
+		<set_value name="Manager.$generationErrorCount" exact="0" />
+		<set_value name="$MissionCount" exact="([$Stations.count * md.kuertee_mgm_config.Config.$user_staionsMult_forMaxPerSector, $SectorLimit - $SectorGMCount].min)i"/>
+		<debug_text text="'kuertee_more_generic_missions: $SectorLimit: ' + $SectorLimit" chance="md.kuertee_mgm_config.Config.$debugChance" />
+		<debug_text text="'kuertee_more_generic_missions: $SectorGMCount: ' + $SectorGMCount" chance="md.kuertee_mgm_config.Config.$debugChance" />
+		<debug_text text="'kuertee_more_generic_missions: $MissionCount: ' + $MissionCount" chance="md.kuertee_mgm_config.Config.$debugChance" />
+	</replace>
+	<!-- REMOVE
+		<do_if value="($SectorGMCount gt 0) and ($MissionCount > $SectorLimit - $SectorGMCount)" comment="hard sectorcap, if we already have some missions">
+	-->
+	<remove sel="//cue[@name=&quot;EvaluateSectorMissions&quot;]//do_if[@value=&quot;($SectorGMCount gt 0) and ($MissionCount > $SectorLimit - $SectorGMCount)&quot;]" />
+	<!-- ADD before
+		<cue name="EvaluateSectorMissions" instantiate="true">
+			...
+				<signal_cue_instantly cue="SelectMission"/>
+	-->
+	<add pos="before" sel="//cue[@name=&quot;EvaluateSectorMissions&quot;]//signal_cue_instantly[@cue=&quot;SelectMission&quot;]">
+		<debug_text text="'kuertee_more_generic_missions: ' + $i + ' signal_cue_instantly ' + SelectMission" chance="md.kuertee_mgm_config.Config.$debugChance" />
+	</add>
+	<!-- ADD before
+		<cue name="SelectMission_GM_Signal_Cue" instantiate="true">
+			<actions>
+				<do_elseif value="@static.$FeedbackValue">
+					<do_elseif value="static.$FeedbackValue.$ID == '$MISSION_NO_VARIANT'">
+						<cancel_cue cue="namespace"/>
+	-->
+	<add pos="before" sel="//cue[@name=&quot;SelectMission_GM_Signal_Cue&quot;]//do_elseif[@value=&quot;static.$FeedbackValue.$ID == '$MISSION_NO_VARIANT'&quot;]/cancel_cue[@cue=&quot;namespace&quot;]">
+		<do_if value="not @Manager.$generationErrorCount">
+			<set_value name="Manager.$generationErrorCount" exact="0" />
+		</do_if>
+		<do_if value="Manager.$generationErrorCount lt 10">
+			<set_value name="Manager.$generationErrorCount" exact="Manager.$generationErrorCount + 1" />
+			<debug_text text="'kuertee_more_generic_missions: Manager.$generationErrorCount: ' + Manager.$generationErrorCount" chance="md.kuertee_mgm_config.Config.$debugChance" />
+			<signal_cue cue="MissionNoVariant_GenerateAgain" />
+		</do_if>
+	</add>
+	<!-- ADD after
+		<cue name="SelectMission">
+	-->
+	<add pos="after" sel="//cue[@name=&quot;SelectMission&quot;]">
+		<cue name="MissionNoVariant_GenerateAgain" instantiate="true">
+			<conditions>
+				<event_cue_signalled />
+			</conditions>
+			<actions>
+				<debug_text text="'kuertee_more_generic_missions: signal_cue ' + SelectMission" chance="md.kuertee_mgm_config.Config.$debugChance" />
+				<signal_cue cue="SelectMission" />
+				<cancel_cue cue="this" />
+			</actions>
+		</cue>
+	</add>
+	<!-- add
+		<library name="SignalCleanupCue">
+			<actions>
+	-->
+	<add sel="//library[@name=&quot;SignalCleanupCue&quot;]/actions">
+		<debug_text text="'kuertee_more_generic_missions: $Feedback: ' + $Feedback" chance="@md.GenericMissions.Manager.$kuerteeDebugChance" />
+		<do_if value="
+			($Feedback == '$accepted_offer' and @md.kuertee_mgm_config.Config.$user_isCreateOnAccept)
+			or 
+			($Feedback == '$OFFER_REMOVED' and @md.kuertee_mgm_config.Config.$user_isCreateOnExpire)
+		">
+			<debug_text text="'kuertee_more_generic_missions signal_cue ' + md.GenericMissions.EvaluateSectorMissions" chance="@md.GenericMissions.Manager.$kuerteeDebugChance" />
+			<signal_cue cue="md.GenericMissions.EvaluateSectorMissions" />
+		</do_if>
+	</add>
+<!-- end: generate more mission -->
+<!-- start: debugger -->
+	<!-- ADD after
+		<cue name="SelectMission">
+	-->
+	<add pos="after" sel="//cue[@name=&quot;SelectMission&quot;]">
+		<cue name="OnUITriggereredForDebug" namespace="this">
+			<conditions>
+				<event_ui_triggered screen="'OptionsMenu'" control="'menu_close'" />
+			</conditions>
+			<actions>
+				<debug_text text="'kuertee_more_generic_missions: $SectorLimit: ' + EvaluateSectorMissions.namespace.$SectorLimit" chance="md.kuertee_mgm_config.Config.$debugChance" />
+				<set_value name="$missionCount" exact="0" />
+				<do_all exact="EvaluateSectorMissions.namespace.$MissionCues.count" counter="$i" reverse="true">
+					<do_if value="EvaluateSectorMissions.namespace.$MissionCues.{$i}.exists and @EvaluateSectorMissions.namespace.$MissionCues.{$i}.$OfferObject.hascontext.{player.sector}">
+						<set_value name="$missionCount" exact="$missionCount + 1" />
+					</do_if>
+				</do_all>
+				<debug_text text="'kuertee_more_generic_missions: $missionCount: ' + $missionCount" chance="md.kuertee_mgm_config.Config.$debugChance" />
+				<debug_text text="'kuertee_more_generic_missions: $SectorGMCount: ' + EvaluateSectorMissions.namespace.$SectorGMCount" chance="md.kuertee_mgm_config.Config.$debugChance" />
+				<set_value name="$start" exact="md.kuertee_mgm_config.Config.$user_createCount_atZeroH" />
+				<set_value name="$end" exact="md.kuertee_mgm_config.Config.$user_createCount_atTenH" />
+				<debug_text text="'0 hour: ' + ($end + ($start - $end) * (10 - 0) / 10)" chance="md.kuertee_mgm_config.Config.$debugChance" />
+				<debug_text text="'1 hour: ' + ($end + ($start - $end) * (10 - 1) / 10)" chance="md.kuertee_mgm_config.Config.$debugChance" />
+				<debug_text text="'5 hour: ' + ($end + ($start - $end) * (10 - 5) / 10)" chance="md.kuertee_mgm_config.Config.$debugChance" />
+				<debug_text text="'9 hour: ' + ($end + ($start - $end) * (10 - 9) / 10)" chance="md.kuertee_mgm_config.Config.$debugChance" />
+				<debug_text text="'10 hour: ' + ($end + ($start - $end) * (10 - 10) / 10)" chance="md.kuertee_mgm_config.Config.$debugChance" />
+				<debug_text text="'11 hour: ' + ($end + ($start - $end) * (10 - 11) / 10)" chance="md.kuertee_mgm_config.Config.$debugChance" />
+				<reset_cue cue="this" />
+			</actions>
+		</cue>
+	</add>
+<!-- end: debugger -->
+</diff>

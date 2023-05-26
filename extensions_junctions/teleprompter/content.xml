@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content id="" name="Teleprompter" description="" author="DS" version="002" date="2023-05-21" save="false" lastupdate="2023-05-21">
+  <text language="86" description="提词器 有角色对话时 在屏幕底部居中放置一个黑色帮助框 用来缓解字幕可读性差的问题 对话结束会自动关闭"/>
+  <!--Set X4 version requirement.-->
+  <dependency version="300"/>
+</content>

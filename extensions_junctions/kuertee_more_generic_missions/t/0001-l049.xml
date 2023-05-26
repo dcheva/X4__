@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<language>
+	<!-- "kuertee mgm" = "kmgm" = "11 13 7 13" in https://www.boxentriq.com/code-breaking/letters-to-numbers -->
+	<page id="1113713" voice="no">
+		<!-- config -->
+		<t id="1">kuertee: Mehr allgemeine Missionen</t>
+		<t id="2">Debug-Protokoll</t>
+		<t id="3">Erneuern, wenn ...</t>
+		<t id="4">eine Mission akzeptiert wurde</t>
+		<t id="5">ein Missionsangebot abläuft</t>
+		<t id="6">Anzahl der Missionen bei 0 Stunden</t>
+		<t id="7">Anzahl der Missionen bei 10 Stunden</t>
+		<t id="8">Missionen im aktuellen Sektor</t>
+		<t id="9">Stationsmultiplikator für maximale Missionen pro Sektor</t>
+		<t id="10">Die Anzahl der zu generierenden bevorzugten Missionen wird durch die Anzahl der Stationen im Sektor multipliziert mit diesem Faktor bestimmt. Im Basisspiel ist dieser Faktor 0,5. Mit dieser Mod ist der Standardwert 2.</t>
+	</page>
+</language>

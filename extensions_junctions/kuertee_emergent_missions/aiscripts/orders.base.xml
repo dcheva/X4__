@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<diff>
+	<!-- add. purpose sector change detector.
+		<interrupts>
+	-->
+	<add sel="//interrupts">
+		<handler name="kEM_ObjectChangeSector">
+			<conditions>
+				<!-- Event for the specified object changing sector (object = sector changing object, param = new sector, param2 = previous sector) -->
+				<event_object_changed_sector object="this.assignedcontrolled" />
+			</conditions>
+			<actions>
+				<signal_objects object="player.galaxy" param="'kEM_ObjectChangeSector'" param2="table[$attacker = this.assignedcontrolled, $sector_new = event.param, $sector_old = event.param2]" />
+			</actions>
+		</handler>
+		<!-- Event for the specified object being destroyed (object = destroyed object, param = killer, param2 = kill method, param3 = was parent killed) -->
+		<!-- <handler name="K_ObjectAttacks_Destroyed">
+			<conditions>
+				<event_object_destroyed object="this.assignedcontrolled" />
+			</conditions>
+			<actions>
+				<debug_text text="'kuertee K_ObjectAttacks_Destroyed: this.assignedcontrolled: ' + @this.assignedcontrolled + ', event.param: ' + @event.param" />
+			</actions>
+		</handler> -->
+	</add>
+	<!-- add after. purpose: on_abort.
+		<attention min="unknown">
+	-->
+	<!-- <add pos="after" sel="//attention[@min=&quot;unknown&quot;]">
+		<on_abort>
+			<debug_text text="'kuertee on_abort: this: ' + this + ' this.assignedcontrolled: ' + @this.assignedcontrolled + ' idcode: ' + @this.assignedcontrolled.idcode" />
+		</on_abort>
+	</add> -->
+</diff>

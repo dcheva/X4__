@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<diff>
+	<!-- add after:
+	<create_order id="'Attack'" object="this.ship" immediate="true">
+	-->
+	<add pos="after" sel="//create_order[@id=&quot;'Attack'&quot;]">
+		<do_if value="@this.$kEMissions_mission">
+			<!-- has an emissions mission -->
+			<do_if value="not $escort">
+				<signal_objects object="this" param="$enemy" param2="'kEMission_move_seekenemies_attack'" />
+			</do_if>
+		</do_if>
+	</add>
+</diff>

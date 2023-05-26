@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mdscript name="kuertee_mgm_config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="md.xsd">
+	<cues>
+		<cue name="Config" namespace="this" version="3">
+			<actions>
+				<set_value name="$debugChance" exact="0" />
+				<set_value name="$user_isCreateOnAccept" exact="true" />
+				<set_value name="$user_isCreateOnExpire" exact="true" />
+				<set_value name="$user_createCount_atZeroH" exact="25" />
+				<set_value name="$user_createCount_atTenH" exact="10" />
+				<set_value name="$user_staionsMult_forMaxPerSector" exact="2" />
+			</actions>
+			<patch sinceversion="2" state="complete">
+				<debug_text text="'patch sinceversion 2, state: ' + this.state" />
+				<set_value name="$user_isCreateOnExpire" exact="true" />
+			</patch>
+			<patch sinceversion="3" state="complete">
+				<debug_text text="'patch sinceversion 3, state: ' + this.state" />
+				<set_value name="$user_staionsMult_forMaxPerSector" exact="2" />
+			</patch>
+		</cue>
+		<cue name="StartSMO" instantiate="true">
+			<conditions>
+				<event_cue_signalled cue="md.Simple_Menu_Options.Reloaded"/>
+			</conditions>
+			<actions>
+				<!-- <debug_text text="'signal_cue_instantly ' + @md.Simple_Menu_API.Register_Options_Menu" /> -->
+				<signal_cue_instantly cue="md.Simple_Menu_API.Register_Options_Menu"
+					param="table[
+						$id = 'kuertee_mgm_extension_options_menu',
+						$columns = 2,
+						$title = {1113713, 1},
+						$onOpen = BuildOptionsMenu
+					]" />
+				<cancel_cue cue="this" />
+			</actions>
+		</cue>
+		<cue name="BuildOptionsMenu" instantiate="true">
+			<conditions>
+				<event_cue_signalled />
+			</conditions>
+			<actions>
+				<debug_text text="'kuertee_more_generic_missions: $SectorLimit: ' + md.GenericMissions.EvaluateSectorMissions.namespace.$SectorLimit" chance="md.kuertee_mgm_config.Config.$debugChance" />
+				<debug_text text="'kuertee_more_generic_missions: $SectorLimit: ' + md.GenericMissions.EvaluateSectorMissions.namespace.$SectorGMCount" chance="md.kuertee_mgm_config.Config.$debugChance" />
+				<!-- <set_value name="$missionCount" exact="0" />
+				<do_all exact="md.GenericMissions.EvaluateSectorMissions.namespace.$MissionCues.count" counter="$i" reverse="true">
+					<do_if value="md.GenericMissions.EvaluateSectorMissions.namespace.$MissionCues.{$i}.exists and @md.GenericMissions.EvaluateSectorMissions.namespace.$MissionCues.{$i}.$OfferObject.hascontext.{player.sector}">
+						<set_value name="$missionCount" exact="$missionCount + 1" />
+					</do_if>
+				</do_all>
+				<debug_text text="'kuertee_more_generic_missions: $missionCount: ' + $missionCount" chance="md.kuertee_mgm_config.Config.$debugChance" /> -->
+				<!-- <set_value name="$missionCount" exact="md.GenericMissions.EvaluateSectorMissions.namespace.$SectorGMCount" /> -->
+				<!-- <set_value name="$missionCount" exact="md.GenericMissions.EvaluateSectorMissions.namespace.$MissionCues.count" /> -->
+				<set_value name="$missionCount" exact="0" />
+				<do_all exact="md.GenericMissions.EvaluateSectorMissions.namespace.$MissionCues.count" counter="$i" reverse="true">
+					<do_if value="md.GenericMissions.EvaluateSectorMissions.namespace.$MissionCues.{$i}.exists">
+						<do_if value="@md.GenericMissions.EvaluateSectorMissions.namespace.$MissionCues.{$i}.$OfferObject.hascontext.{player.sector}">
+							<set_value name="$missionCount" operation="add" />
+						</do_if>
+					</do_if>
+				</do_all>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Add_Row"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[$col=1, $text={1113713, 8}]" comment="Missions in current sector" />
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[$col=2, $text=$missionCount]" />
+
+				<signal_cue_instantly cue="md.Simple_Menu_API.Add_Row"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[$col=1, $text={1113713, 6}]" comment="Number of mission at 0 hour" />
+				<signal_cue_instantly
+					cue = "md.Simple_Menu_API.Make_Slider"
+					param = "table[
+						$id = 'user_createCount_atZeroH',
+						$start =  md.kuertee_mgm_config.Config.$user_createCount_atZeroH,
+						$col = 2,
+						$text = table[$text=''],
+						$min = 7, $max = 50, $step = 1,
+						$default = 25,
+						$mouseOverText = {1001, 2661} + ': 25.',
+						$onSliderCellChanged = OnSMOSliderChange
+					]"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Add_Row"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[$col=1, $text={1113713, 7}]" comment="Number of mission at 10 hours" />
+				<signal_cue_instantly
+					cue = "md.Simple_Menu_API.Make_Slider"
+					param = "table[
+						$id = 'user_createCount_atTenH',
+						$start =  md.kuertee_mgm_config.Config.$user_createCount_atTenH,
+						$col = 2,
+						$text = table[$text=''],
+						$min = 7, $max = 50, $step = 1,
+						$default = 25,
+						$mouseOverText = {1001, 2661} + ': 10.',
+						$onSliderCellChanged = OnSMOSliderChange
+					]"/>
+
+				<!-- <t id="9">Stations multipler for max missions per sector</t>
+				<t id="10">Overriding the number of preferred missions to generate is number of stations in the sector multiplied by this number. In the base game, this factor is 0.5. With this mod, the default is 2.</t> -->
+				<signal_cue_instantly cue="md.Simple_Menu_API.Add_Row"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[$col=1, $text={1113713, 9}]" />
+				<signal_cue_instantly
+					cue = "md.Simple_Menu_API.Make_Slider"
+					param = "table[
+						$id = 'user_staionsMult_forMaxPerSector',
+						$start =  md.kuertee_mgm_config.Config.$user_staionsMult_forMaxPerSector,
+						$col = 2,
+						$text = table[$text=''],
+						$min = 0.25, $max = 10, $step = 0.25,
+						$default = 2,
+						$mouseOverText = {1001, 2661} + ': 2.',
+						$onSliderCellChanged = OnSMOSliderChange
+					]"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Add_Row"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[$col=2, $text={1113713, 10}, $wordwrap=true]" />
+
+				<signal_cue_instantly cue="md.Simple_Menu_API.Add_Row"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[$col=1, $text={1113713, 3}]" comment="Regenerate when ..."/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Add_Row"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[$col=1, $text={1113713, 4}]" comment="a mission is accepted"/>
+				<signal_cue_instantly
+					cue = "md.Simple_Menu_API.Make_CheckBox"
+					param = "table[
+						$id = 'user_isCreateOnAccept',
+						$checked = md.kuertee_mgm_config.Config.$user_isCreateOnAccept,
+						$col = 2,
+						$width = 'Helper.standardButtonHeight', $height = 'Helper.standardButtonHeight',
+						$onClick = OnSMOCheckboxChange
+					]"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Add_Row"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[$col=1, $text={1113713, 5}]" comment="a mission offer expires"/>
+				<signal_cue_instantly
+					cue = "md.Simple_Menu_API.Make_CheckBox"
+					param = "table[
+						$id = 'user_isCreateOnExpire',
+						$checked = md.kuertee_mgm_config.Config.$user_isCreateOnExpire,
+						$col = 2,
+						$width = 'Helper.standardButtonHeight', $height = 'Helper.standardButtonHeight',
+						$onClick = OnSMOCheckboxChange
+					]"/>
+
+				<signal_cue_instantly cue="md.Simple_Menu_API.Add_Row"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[$col=1, $text='']"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Add_Row"/>
+				<signal_cue_instantly cue="md.Simple_Menu_API.Make_Text" param="table[$col=1, $text={1113713, 2}, $color='Helper.color.red']"/>
+				<signal_cue_instantly
+					cue = "md.Simple_Menu_API.Make_CheckBox"
+					param = "table[
+						$id = 'debugChance',
+						$checked = if md.kuertee_mgm_config.Config.$debugChance == 100 then true else false,
+						$col = 2,
+						$width = 'Helper.standardButtonHeight', $height = 'Helper.standardButtonHeight',
+						$bgColor = 'Helper.color.red',
+						$onClick = OnSMOCheckboxChange
+					]"/>
+			</actions>
+		</cue>
+		<cue name="OnSMOSliderChange" instantiate="true">
+			<conditions>
+				<event_cue_signalled />
+			</conditions>
+			<actions>
+				<!-- <debug_text text="event.param.$id + ' to: ' + @event.param.$value + ' or ' + @event.param.$checked" /> -->
+				<debug_text text="event.param.$id + ' pre: ' + md.kuertee_mgm_config.Config.{'$' + event.param.$id}" chance="md.kuertee_mgm_config.Config.$debugChance"/>
+				<set_value name="md.kuertee_mgm_config.Config.{'$' + event.param.$id}" exact="event.param.$value" />
+				<debug_text text="event.param.$id + ' post: ' + md.kuertee_mgm_config.Config.{'$' + event.param.$id}" chance="md.kuertee_mgm_config.Config.$debugChance"/>
+				<cancel_cue cue = "this" />
+			</actions>
+		</cue>
+		<cue name="OnSMOCheckboxChange" instantiate="true">
+			<conditions>
+				<event_cue_signalled />
+			</conditions>
+			<actions>
+				<!-- <debug_text text="event.param.$id + ' to: ' + @event.param.$value + ' or ' + @event.param.$checked" /> -->
+				<debug_text text="event.param.$id + ' pre: ' + md.kuertee_mgm_config.Config.{'$' + event.param.$id}" chance="md.kuertee_mgm_config.Config.$debugChance"/>
+				<do_if value="event.param.$id == 'debugChance'">
+					<set_value name="md.kuertee_mgm_config.Config.{'$' + event.param.$id}" exact="if event.param.$checked then 100 else 0" />
+				</do_if>
+				<do_else>
+					<set_value name="md.kuertee_mgm_config.Config.{'$' + event.param.$id}" exact="event.param.$checked" />
+				</do_else>
+				<debug_text text="event.param.$id + ' post: ' + md.kuertee_mgm_config.Config.{'$' + event.param.$id}" chance="md.kuertee_mgm_config.Config.$debugChance"/>
+				<cancel_cue cue = "this" />
+			</actions>
+		</cue>
+		<cue name="onDropDownConfirmed" instantiate="true">
+			<conditions>
+				<event_cue_signalled />
+			</conditions>
+			<actions>
+				<debug_text text="event.param.$id + ' to: ' + @event.param.$option.$text + ' value: ' + @event.param.$option.$value" chance="md.kuertee_mgm_config.Config.$debugChance" />
+				<debug_text text="event.param.$id + ' pre: ' + md.kuertee_mgm_config.Config.{'$' + event.param.$id}" chance="md.kuertee_mgm_config.Config.$debugChance"/>
+				<set_value name="md.kuertee_mgm_config.Config.{'$' + event.param.$id}" exact="(event.param.$option.$value)" />
+				<debug_text text="event.param.$id + ' post: ' + md.kuertee_mgm_config.Config.{'$' + event.param.$id}" chance="md.kuertee_mgm_config.Config.$debugChance"/>
+				<cancel_cue cue = "this" />
+			</actions>
+		</cue>
+	</cues>
+</mdscript>
