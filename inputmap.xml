@@ -19,9 +19,9 @@
     <param name="sensitivity_fp_pitch" value="0.50"/>
     <param name="sensitivity_fp_mouse_yaw" value="0.75"/>
     <param name="sensitivity_fp_mouse_pitch" value="0.75"/>
-    <param name="sensitivity_direct_mouse_steering_yaw" value="0.75"/>
-    <param name="sensitivity_direct_mouse_steering_pitch" value="0.75"/>
-    <param name="sensitivity_direct_mouse_steering_roll" value="0.75"/>
+    <param name="sensitivity_direct_mouse_steering_yaw" value="0.37"/>
+    <param name="sensitivity_direct_mouse_steering_pitch" value="0.37"/>
+    <param name="sensitivity_direct_mouse_steering_roll" value="0.37"/>
     <param name="allow_mouse_vr_pointer" value="true"/>
     <param name="sensitivity_vr_mouse_yaw" value="0.50"/>
     <param name="sensitivity_vr_mouse_pitch" value="0.50"/>
