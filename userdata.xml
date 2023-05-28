@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
   <known_lockbox_rare>1</known_lockbox_rare>
-  <known_sector>22</known_sector>
+  <known_sector>25</known_sector>
   <relation_ceremony_10>1</relation_ceremony_10>
   <relation_ceremony_20>1</relation_ceremony_20>
   <people_crew_count>15</people_crew_count>
@@ -16,5 +16,6 @@
   <known_sector_xenon>1</known_sector_xenon>
   <known_datavault>1</known_datavault>
   <timeline_agi_tension>1</timeline_agi_tension>
-  <known_timeline_unlock>1</known_timeline_unlock>
+  <known_timeline_unlock>2</known_timeline_unlock>
+  <timeline_terran_conflict>1</timeline_terran_conflict>
 </root>
