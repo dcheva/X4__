@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<content id="sector_scan" name="Long Range sectors scan" description="The scan is tied to the size of the ship." author="denison10" version="001" date="2023-05-06" save="0" enabled="1">
-<text language="7" name="Сканирование секторов дальнего радиуса действия" description="Сканирование привязана к размеру корабля." author="denison10"/></content>

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<content id="jwl_shipicons" name="JWL: Ship Icons" description="By Jewels" author="JWL" version="100" date="2023-05-19" save="false" enabled="1">
-	<dependency id="ego_dlc_boron" optional="true" name="CE"></dependency>
-	<dependency id="ego_dlc_pirate" optional="true" name="ToA"></dependency>
-	<dependency id="ego_dlc_split" optional="true" name="SV"></dependency>
-	<dependency id="ego_dlc_terran" optional="true" name="CoH"></dependency>
-	<dependency id="ship_variation_expansion" optional="true" name="SVE"></dependency>
-	<text language="44" name="jwl_shipicons" description="New and improved ship icons for easier identification." author="JWL"></text>
-</content>

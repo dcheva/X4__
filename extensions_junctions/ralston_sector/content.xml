@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<content id="ws_2970327215" name="Ralston Sector" description="Adds a new sector to the left of Argon Prime using the empty jump gate" author="Treybor" version="101" save="false" date="2023-05-03" lastupdate="1683161494" sync="false">
-  <dependency version="600"/>
-  <dependency id="ego_dlc_boron" version="100" name="Kingdom End"/>
-</content>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<diff>
-	<replace sel="/macros/macro[@name='ship_bor_l_miner_liquid_01_a_macro']/properties/identification">  
-      <identification name="{20101,53103}" basename="{20101,53101}" makerrace="boron" description="{20101,53113}" variation="{20111,3201}" shortvariation="{20111,3201}" icon="ship_m_mine_02" />
-	</replace>
-</diff>

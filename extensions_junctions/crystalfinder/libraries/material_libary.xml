@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-
-<replace sel="/materiallibrary/collection[@name='p1lensflares']/material[@name='sparkle_v1']/properties/property[@name='diffuse_map']">
-    <property type="BitMap" name="diffuse_map" value="extensions\crystalfinder\assets\textures\lensflares\lens_rays3_small_diff"></property>
-</replace>

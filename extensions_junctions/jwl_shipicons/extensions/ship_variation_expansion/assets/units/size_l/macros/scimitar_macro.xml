@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<diff>
-	<replace sel="/macros/macro[@name='scimitar_macro']/properties/identification">  
-      <identification name="{20101,60501}" basename="{20101,60501}" makerrace="terran" description="{6920229,2}" icon="ship_l_cruiser_01" />
-	</replace>
-</diff>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<diff>
-  <add sel="/parameters/hintpositions">
-    <position x="50" y="98" />
-  </add>
-</diff>
